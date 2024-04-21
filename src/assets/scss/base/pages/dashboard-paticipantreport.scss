@@ -1,0 +1,15 @@
+@import '../../../scss/base/bootstrap-extended.scss';
+@import '../../../scss/base/components/include';
+
+.label-pati-main{
+  color: $primary;
+  font-weight: bold;
+}
+.label-pati-form{
+  color: black;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.report-date-invalid{
+  border-color: red;
+}

@@ -1,0 +1,19 @@
+.modal-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-content {
+    height: 400px !important;
+    max-height: 400px !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    border-radius: 10px !important;
+
+    .modal-body-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

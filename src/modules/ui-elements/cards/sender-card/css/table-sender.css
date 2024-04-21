@@ -1,0 +1,36 @@
+.table-sender.card-body {
+  padding: 0px;
+}
+
+.div-flex-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.div-flex-icon-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.react-dataTable-custom-sender .rdt_TableBody .rdt_TableRow .rdt_TableCell {
+  height: 50px !important;
+}
+
+.react-dataTable-custom-sender .rdt_TableBody .rdt_TableRow {
+  height: 50px;
+}
+.space-span-info {
+  padding: 3px 0px;
+}
+
+.dataTable-text-size {
+  font-size: 14px;
+}
+
+.custom-paging.mt-1 {
+  margin-top: 0rem !important;
+}

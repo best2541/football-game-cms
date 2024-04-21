@@ -1,0 +1,65 @@
+.card-dt-style {
+  /* margin-bottom: 10px !important;
+  margin-top: 10px !important; */
+  margin-left: 20px !important;
+  margin-right: 10px !important;
+}
+
+.card-header-display {
+  display: block !important;
+}
+
+.app-collapse-custom.card svg {
+  transition: all 300ms linear 0s;
+  transform: rotate(180deg);
+}
+
+.app-collapse-custom.card .card-header:not(.collapsed) svg {
+  transform: rotate(0deg);
+}
+
+.group-style {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.avtar-custom-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+}
+
+.ant-avatar-custom-complete {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #28c76f;
+  border-radius: 50%;
+}
+
+.ant-avatar-custom-recurring {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #00cfe8;
+  border-radius: 50%;
+}
+
+.ant-avatar-custom-expried {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #ff9f43;
+  border-radius: 50%;
+}
+
+.ant-avatar-custom-error {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #ea5455;
+  border-radius: 50%;
+}

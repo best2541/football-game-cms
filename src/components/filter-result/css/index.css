@@ -1,0 +1,37 @@
+.filter-content {
+  width: 700px;
+  max-width: 900px;
+  margin-bottom: 0px !important; 
+}
+
+.add-filter-content {
+  width: 250px;
+  max-width: 400px;
+  margin-bottom: 0px !important; 
+}
+
+.filter-content-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: -10px !important;
+  margin-top: -10px !important;
+}
+
+.add-filter-content-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: -10px !important;
+  margin-top: -10px !important;
+}
+
+.filter-content-add-new-option {
+  display: flex;
+  cursor: pointer;
+  color: #1b55a6;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+

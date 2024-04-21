@@ -1,0 +1,70 @@
+/* .antd-input-custom .ant-input-number-input {
+  padding: 0 11px;
+  background-color: transparent;
+  border: 0;
+} */
+
+.antd-input-custom .ant-input-number-input {
+  width: 100%;
+  height: 36px;
+  outline: 0;
+  transition: all 0.3s linear;
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+  border-radius: 0.357rem !important;
+}
+
+.antd-input-custom.ant-input-number {
+  padding: 4px 11px;
+  background-color: #fff;
+  background-image: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.antd-input-custom.ant-input-number {
+  box-sizing: border-box;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  transition: all 0.3s;
+  display: inline-block;
+  width: 90px;
+  border-radius: 4px;
+}
+
+/* .antd-input-custom .ant-input:not(.ant-input-disabled):hover
+  .ant-input-number {
+  border-color: #cbcbcb !important;
+} */
+
+.antd-input-custom.ant-input-number:hover {
+  border-color: none !important;
+}
+
+.antd-input-custom.ant-input-number-focused {
+  /* border-color: #cbcbcb !important;
+  box-shadow: #cbcbcb; */
+  border-color: #1b55a6;
+  box-shadow: none !important;
+}
+
+/* .antd-input-custom.ant-input-number::selection {
+  border-color: #1b55a6 !important;
+} */
+
+.antd-select-custom.ant-input-number-focused:not(.ant-input-number-disabled).ant-input-number:not(.ant-input-number-customize-input)
+  .ant-input-number {
+  border-color: #1b55a6;
+  box-shadow: none !important;
+  /* box-shadow: 0 0 0 2px rgba(245, 117, 37, 0.856); */
+}

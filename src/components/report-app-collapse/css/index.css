@@ -1,0 +1,19 @@
+.card-dt-style {
+  /* margin-bottom: 10px !important;
+  margin-top: 10px !important; */
+  margin-left: 20px !important;
+  margin-right: 10px !important;
+}
+
+.card-header-display {
+  display: block !important;
+}
+
+.app-collapse-custom.card svg {
+  transition: all 300ms linear 0s;
+  transform: rotate(180deg);
+}
+
+.app-collapse-custom.card .card-header:not(.collapsed) svg {
+  transform: rotate(0deg);
+}

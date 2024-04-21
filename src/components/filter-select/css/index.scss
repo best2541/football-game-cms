@@ -1,0 +1,33 @@
+@import '../../../assets/scss/base/bootstrap-extended/include';
+
+.group-filter {
+  border: 1px solid $custom-control-border-color;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  height: 40px;
+  border-radius: 0.357rem;
+}
+
+.dropdown-filter {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-filter .input-group-text, .group-filter .search-group-text {
+  border-width: 0px;
+}
+
+.group-filter .dropdown {
+  border-right: 1px solid $custom-control-border-color;
+}
+
+.group-filter .input-group:focus, .group-filter .input-group:focus-within {
+  box-shadow: none !important;
+}
+
+.filter-dropdown-menu {
+  width: 400px !important; 
+}

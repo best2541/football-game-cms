@@ -1,0 +1,31 @@
+.padding-add-column {
+  padding: 10px;
+}
+
+.title-fields {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.value-fields {
+  font-size: 11px;
+  font-weight: 200;
+}
+
+.mr-style-fileds {
+  margin-right: 5px;
+}
+
+.mr-input-add-column {
+  margin-bottom: 5px;
+}
+
+.layout-add-fields-manage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add-field-title {
+  padding: 12px 14px;
+}

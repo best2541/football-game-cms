@@ -1,0 +1,1 @@
+export const REQUEST_MENU = 'REQUEST_MENU'

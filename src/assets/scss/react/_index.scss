@@ -1,0 +1,15 @@
+// Base Extended (General styles which are not added 'base styles')
+@import 'base-extended';
+
+@import 'dark-layout';
+
+@import 'rtl';
+
+@import 'reactstrap/index';
+
+@import 'app-loader';
+
+@import 'libs/flatpickr/flatpickr.scss';
+@import 'libs/tables/react-dataTable-custom-component.scss';
+
+@import 'libs/tables/react-dataTable-component.scss'

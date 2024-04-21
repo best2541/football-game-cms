@@ -1,0 +1,21 @@
+@import '@src/assets/scss/base/bootstrap-extended/include';
+@import '@src/assets/scss/base/components/include';
+@import '@src/assets/scss/base/plugins/extensions/ext-component-drag-drop.scss';
+
+.sortable-selected {
+  background-color: $body-bg;
+}
+
+// Dark
+.dark-layout {
+  .sortable-selected {
+    background-color: $theme-dark-body-bg !important;
+  }
+}
+
+// RTL
+html[dir='rtl'] {
+  .sortable-row {
+    flex-direction: row-reverse;
+  }
+}

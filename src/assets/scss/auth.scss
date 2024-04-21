@@ -1,0 +1,13 @@
+.btn.permission-disable, svg.permission-disable {
+  pointer-events: none; //better than cursor: default;
+  opacity: 0.65;
+}
+
+.permission-disable.custom-switch label::before {
+  pointer-events: none; //better than cursor: default;
+  opacity: 0.65;
+}
+
+.permission-disable {
+  pointer-events: none; //better than cursor: default;
+}

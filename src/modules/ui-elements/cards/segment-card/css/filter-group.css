@@ -1,0 +1,40 @@
+.div-search-data {
+  padding: 20px 8px;
+}
+
+.custom-input-segment {
+  width: 160px;
+  border: unset;
+}
+
+.col-left-segment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+}
+
+.divider-custom-vertical-segment {
+  border-left: 1px solid #bbb;
+  margin: 0px 14px;
+  height: 1.2rem;
+}
+
+.col-right-segment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.custom-button-outline-segment {
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-right: 40px;
+  cursor: pointer;
+}

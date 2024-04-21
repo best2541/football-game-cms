@@ -1,0 +1,63 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.img-reward {
+    height: auto;
+    max-height: 200px;
+}
+
+.img-card {
+    position: relative;
+    height: 70%;
+}
+
+.fade-in {
+    transition: opacity 0.3s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.spin-button {
+    background: rgb(173, 111, 85);
+    background: linear-gradient(90deg, rgba(173, 111, 85, 1) 4%, rgba(199, 143, 127, 1) 50%, rgba(173, 111, 85, 1) 96%);
+    color: #fff !important;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    height: 1.8em;
+    font-family: 'Vanitas';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    z-index: 3;
+    margin-top: 7rem;
+    line-height: 0;
+}
+
+.rewardshow-roulette {
+    position: relative;
+    width: 72%;
+    top: 260px !important;
+    // left: 14%;
+    z-index: 2;
+}
+
+.rewardshow-roulette-play {
+    position: relative;
+    width: 145px;
+    top: 305px !important;
+    left: 30%;
+    z-index: 2;
+}
+
+.rewardshow-roulette-preview {
+    position: relative;
+    width: 72%;
+    top: 218px !important;
+    z-index: 2;
+}
