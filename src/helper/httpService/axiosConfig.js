@@ -33,7 +33,6 @@ import useJwt from '@src/helper/auth/jwt/jwtDefaultConfig'
 // import * as Session from "@components/Service/Session.service";
 // const timeout = 60000;
 
-const britzEndPoint = useJwt.britzEndPoint
 const baseUrl = ""
 
 // const checkStatus = (response) => {

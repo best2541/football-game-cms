@@ -30,10 +30,11 @@ $primary-color: (
   'darken-2': darken(theme-color('primary'), 10%),
   'darken-3': darken(theme-color('primary'), 15%),
   'darken-4': darken(theme-color('primary'), 20%),
-  'accent-1': #bdfdff,
-  'accent-2': #8afbff,
-  'accent-3': #57faff,
-  'accent-4': #3df9ff
+  'accent-1': #b14354,
+  'accent-2': #af2539,
+  'accent-3': #af1930,
+  'accent-4': #AE132A
+
 );
 $secondary-color: (
   'lighten-5': lighten(theme-color('secondary'), 25%),

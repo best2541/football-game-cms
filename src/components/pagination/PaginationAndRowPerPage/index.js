@@ -32,34 +32,33 @@ const PaginationAndRowPerPage = ({ totalPage, currentPage, perPage, handlePagina
 
   const pageChange = (page) => {
     handlePagination(page.selected)
-    console.log('test', currentPage)
   }
 
   return (
     <Fragment>
       <Row style={{ margin: "0px 0px 0px 0px" }} className={`mb-1 ${totalPage === 0 && 'd-none'}`}>
-        <Col style={{ color: "#b8c2cc" }}>
+        {/* <Col style={{ color: "#b8c2cc" }}>
           <span>
             {`showing ${paginationFromTo(perPage, currentPage, totalPage).from} to 
             ${paginationFromTo(perPage, currentPage, totalPage).to} 
             of ${totalPage} entries`}
           </span>
-        </Col>
+        </Col> */}
+        <div className="mr-50" style={{ color: "#b8c2cc" }}>Rows per page: </div>
+        <UncontrolledDropdown isOpen={open} toggle={toggle} className="mr-1">
+          <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
+            {rowPerPage}
+            {open ? <ChevronUp size={14} style={{ marginTop: "-3px", marginLeft: "5px" }} /> : <ChevronDown size={14} style={{ marginTop: "-3px", marginLeft: "5px" }} />}
+          </DropdownToggle>
+          <DropdownMenu right className="dropdown-per-page">
+            {dataRow.map(item => (
+              <DropdownItem onClick={e => onChangeRow(item)} className='w-100' key={item}>
+                {item}
+              </DropdownItem>
+            ))}
+          </DropdownMenu>
+        </UncontrolledDropdown>
         <Col className="d-flex justify-content-end">
-          <div className="mr-50" style={{ color: "#b8c2cc" }}>Rows per page: </div>
-          <UncontrolledDropdown isOpen={open} toggle={toggle} className="mr-1">
-            <DropdownToggle color='' className='bg-transparent btn-sm border-0 p-50'>
-              {rowPerPage}
-              {open ? <ChevronUp size={14} style={{ marginTop: "-3px", marginLeft: "5px" }} /> : <ChevronDown size={14} style={{ marginTop: "-3px", marginLeft: "5px" }} />}
-            </DropdownToggle>
-            <DropdownMenu right className="dropdown-per-page">
-              {dataRow.map(item => (
-                <DropdownItem onClick={e => onChangeRow(item)} className='w-100' key={item}>
-                  {item}
-                </DropdownItem>
-              ))}
-            </DropdownMenu>
-          </UncontrolledDropdown>
           <Badge pill color='light-primary' className="py-50 mr-25 align-self-center cursor-pointer" onClick={handleFirstPage}>First Page</Badge>
           <ReactPaginate
             previousLabel=""

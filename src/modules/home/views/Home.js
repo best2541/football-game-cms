@@ -5,61 +5,231 @@ import DataTable from "react-data-table-component"
 import { requestLoading } from "@src/redux/actions/main"
 import LoadingSpinner from "@src/components/spinner/LoadingSpinner"
 import GroupListFilter from "../components/GroupListFilter"
-import { Card, CardBody, CardHeader, Col, Row } from "reactstrap"
+import { Button, Card, CardBody, CardHeader, Col, Row } from "reactstrap"
 import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
 import Chart from "react-apexcharts"
-import { Flex, Progress } from 'antd'
-import { height } from "@mui/system"
+import { Progress } from 'antd'
+import { axiosInstance } from "../../../helper/api"
+import { convertToK } from "../../../helper/convert"
+import { groupBy } from '../../../helper/groupby'
+import ReactExport from "react-export-excel"
 
+const ExcelFile = ReactExport.ExcelFile
+const ExcelSheet = ReactExport.ExcelFile.ExcelSheet
+const ExcelColumn = ReactExport.ExcelFile.ExcelColumn
+
+const reward = (value) => {
+  if (value <= 2) {
+    return 'Gold'
+  } else if (value <= 7) {
+    return 'Voucher 1000'
+  } else if (value <= 17) {
+    return 'Voucher 300'
+  } else if (value <= 32) {
+    return 'The 1-500 Pts'
+  }
+}
+
+const chart = {
+  options: {
+    legend: {
+      show: false
+    },
+    labels: ['Not participate', 'Play today'],
+    colors: ['#000000', '#AE132A']
+  }
+}
+const chart2 = {
+  options: {
+    legend: {
+      show: false
+    },
+    labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+    colors: ['#cfa3aa'],
+    markers: {
+      size: 5,
+      colors: '#AE132A',
+      strokeColors: '#AE132A',
+      strokeWidth: 2,
+      strokeOpacity: 0.9,
+      strokeDashArray: 0,
+      fillOpacity: 1,
+      discrete: [],
+      shape: "circle",
+      radius: 2,
+      offsetX: 0,
+      offsetY: 0,
+      onClick: undefined,
+      onDblClick: undefined,
+      showNullDataPoints: true,
+      hover: {
+        size: undefined,
+        sizeOffset: 3
+      }
+    },
+    chart: {
+      toolbar: {
+        show: false
+      }
+    },
+    title: {
+      text: 'Peak Time / Less Time',
+      align: 'left'
+    }
+  }
+}
+const columns = [
+  {
+    name: 'Rank',
+    sortable: true,
+    selector: row => row.rank
+  },
+  {
+    name: 'Name',
+    sortable: true,
+    selector: row => row.name
+  },
+  {
+    name: 'Phone',
+    sortable: true,
+    selector: row => row.phone
+  },
+  {
+    name: 'Point',
+    sortable: true,
+    selector: row => row.score
+  },
+  {
+    name: 'Reward',
+    sortable: true,
+    selector: row => reward(row.rank)
+  }
+]
+const data = [
+  {
+    rank: 1,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 2,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 3,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 4,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 5,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 6,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 7,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 8,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 9,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 10,
+    name: 'Beetlejuice',
+    score: '1988'
+  },
+  {
+    rank: 11,
+    name: 'Beetlejuice',
+    score: '1988'
+  }
+]
 const Home = () => {
   const dispatch = useDispatch()
-  const [chart, setChart] = useState({
-    options: {
-      legend: {
-        show: false
-      },
-      labels: ['All users', 'Play today']
-    },
-    series: [44, 55]
-  })
-  const [chart2, setChart2] = useState({
-    options: {
-      legend: {
-        show: false
-      },
-      labels: ['8.00', '8.30', '9.00'],
-      markers: {
-        size: 4
-      },
-      chart: {
-        toolbar: {
-          show: false
-        }
-      },
-      title: {
-        text: 'Product Trends by Month',
-        align: 'left'
-      }
-    },
-    series: [
-      {
-        name: "Series A",
-        data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
-      }
-    ]
-  })
-  const { mCoupon, activity, homeDetail, loading } = useSelector((state) => state.homeDetail)
+  const [datas, setDatas] = useState([])
+  const [search, setSearch] = useState('')
+  const [allTimePlay, setAllTimePlay] = useState(0)
+  const [totalUsers, setTotalUsers] = useState(0)
+  const [usersPlayToday, setUsersPlayToday] = useState(0)
+  const [records, setRecords] = useState([])
+  const [page, setPage] = useState(0)
+  const [perPage, setPerPage] = useState(10)
+  const { loading } = useSelector((state) => state.homeDetail)
 
-  const getData = async () => {
+  const handlePagination = (value) => {
+    setPage(value)
+  }
+  const handleRowPerPage = (value) => {
+    setPerPage(value)
   }
 
-  useEffect(() => {
-    getData()
-  }, [])
+  const renderExportBtn = () => (
+    <>
+      <ExcelFile element={<Button className="bg-danger">Export</Button>}>
+        <ExcelSheet data={datas} name="Ranking">
+          <ExcelColumn label="Rank" value="rank" />
+          <ExcelColumn label="Name" value="name" />
+          <ExcelColumn label="Phone" value="phone" />
+          <ExcelColumn label="Point" value="score" />
+          <ExcelColumn label="Reward"
+            value={col => (
+              reward(col.rank)
+            )} />
+        </ExcelSheet>
+      </ExcelFile>
+    </>
+  )
 
+  const load = () => {
+    axiosInstance.get(`/dashboard/getDashboardTable?search=${search}`)
+      .then(result => {
+        setDatas(result.data.ranking)
+      })
+  }
   useEffect(() => {
-    dispatch(requestLoading(loading))
-  }, [mCoupon, activity, homeDetail, loading])
+    load()
+  }, [search])
+  useEffect(() => {
+    axiosInstance.get('/dashboard/getDashboard')
+      .then(async result => {
+        setAllTimePlay(result.data.allTimePlay)
+        setTotalUsers(result.data.totalUsers)
+        const playToday = groupBy(result.data.playToday, 'uid')
+        const set = {}
+        await result.data.playToday?.map(data => {
+          const date = new Date(data.create_date)
+          date.setHours(date.getHours())
+          const hour = date.getHours()
+          set[hour] = set[hour] ? set[hour] + 1 : 1
+        })
+        setRecords([
+          {
+            name: "ครั้ง",
+            data: Object.values(set)
+          }
+        ])
+        setUsersPlayToday(playToday)
+        dispatch(requestLoading(loading))
+      })
+  }, [])
 
   return (
     <Fragment>
@@ -73,13 +243,14 @@ const Home = () => {
         <Col lg='3' className='mb-2'>
           <Card style={{ height: '100%' }}>
             <CardHeader>
-              <h4>Game name</h4>
+              <h4 className="m-0">Tap Tap Go</h4>
             </CardHeader>
             <CardBody>
+              <hr />
               <h5>Total all time play:</h5>
-              <h4>911</h4>
-              <h3>Total Users</h3>
-              <h3>5000</h3>
+              <h1>{allTimePlay}</h1>
+              <h3 className="text-primary">Total Users:</h3>
+              <h1 className="text-primary">{totalUsers}</h1>
             </CardBody>
           </Card>
         </Col>
@@ -87,16 +258,17 @@ const Home = () => {
           <Card style={{ height: '100%' }}>
             <CardBody>
               <Chart
+                colors={chart.colors}
                 options={chart.options}
-                series={chart.series}
+                series={[totalUsers - Object.keys(usersPlayToday).length, Object.keys(usersPlayToday).length]}
                 labels={chart.labels}
                 type="pie"
                 width="100%"
               />
-              <div className="d-flex justify-content-between"><div>All users</div><div>44k</div></div>
-              <Progress percent={44} />
-              <div className="d-flex justify-content-between"><div>Play today</div><div>55k</div></div>
-              <Progress percent={55} />
+              <div className="d-flex justify-content-between"><div>Not participate</div><div>{convertToK(totalUsers - Object.keys(usersPlayToday).length)}</div></div>
+              <Progress strokeColor='#000000' percent={((totalUsers - Object.keys(usersPlayToday).length) / totalUsers) * 100} format={(percen) => `${percen}%`} />
+              <div className="d-flex justify-content-between"><div>Play today</div><div>{convertToK(Object.keys(usersPlayToday).length)}</div></div>
+              <Progress strokeColor='#AE132A' percent={(Object.keys(usersPlayToday).length / totalUsers) * 100} format={(percen) => `${percen}%`} />
             </CardBody>
           </Card>
         </Col>
@@ -105,7 +277,7 @@ const Home = () => {
             <CardBody>
               <Chart
                 options={chart2.options}
-                series={chart2.series}
+                series={records}
                 labels={chart2.labels}
                 type="line"
                 width="100%"
@@ -116,33 +288,28 @@ const Home = () => {
       </Row>
       <Card>
         <CardBody>
-          <GroupListFilter />
+          <GroupListFilter search={search} setSearch={setSearch} exportBtn={renderExportBtn} />
           <DataTable
-          // data={data.data}
-          // expandableRows
-          // expandableRowsHideExpander={true}
-          // columns={TagColumnList(loadingDatas, onEditMember)}
-          // className="react-dataTable react-dataTable-custom-otp"
+            columns={columns}
+            data={datas.slice((page * perPage), ((page * perPage) + perPage))}
+            // expandableRows
+            // expandableRowsHideExpander={true}
+            // columns={TagColumnList(loadingDatas, onEditMember)}
+            className="react-dataTable react-dataTable-custom-otp"
           // sortIcon={<ChevronDown size={10} />}
           // onSelectedRowsChange={handleChange}
           // selectableRowsComponent={BootstrapCheckbox}
           // selectableRowSelected={selectableRowSelected}
           />
           <PaginationAndRowPerPage
-            currentPage={2}
-            perPage={5}
-            totalPage={20}
-          // handlePagination={val => handlePagination(val)}
-          // handleRowPerPage={val => handleRowPerPage(val)}
+            currentPage={page}
+            perPage={perPage}
+            totalPage={datas.length}
+            handlePagination={val => handlePagination(val)}
+            handleRowPerPage={val => handleRowPerPage(val)}
           />
         </CardBody>
       </Card>
-      {/* <HomeDashboardFilter
-        successColorShade={"#28dac6"}
-        labelColor={'#b4b7bd'}
-        tooltipShadow={'rgba(0, 0, 0, 0.25)'}
-        gridLineColor={'rgba(200, 200, 200, 0.2)'} 
-      /> */}
       <LoadingSpinner />
     </Fragment>
   )

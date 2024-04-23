@@ -2,6 +2,11 @@ import { lazy } from "react"
 
 const HomeRoutes = [
   {
+    path: "/",
+    component: lazy(() => import("@modules/home/views/Home.js")),
+    exact: true
+  },
+  {
     path: "/Dashboard",
     component: lazy(() => import("@modules/home/views/Home.js")),
     exact: true

@@ -26,7 +26,7 @@ const rootReducer = combineReducers({
 
   // homeDashboard
   homeDashboard,
-  homeDetail,
+  homeDetail
 
 })
 

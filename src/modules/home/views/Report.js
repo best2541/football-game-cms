@@ -1,33 +1,100 @@
-import { Fragment, useEffect } from "react"
+import { Fragment, useEffect, useState } from "react"
 import NavbarTitle from "@src/components/navbarTitle"
 import { useDispatch, useSelector } from "react-redux"
 import DataTable from "react-data-table-component"
-import { updateHomeDashboardData, updateHomeDashboardAccountChoice } from "../store/homeDashboard/actions"
-import { getAccountInformation } from "../store/homeDetail/actions"
 import { requestLoading } from "@src/redux/actions/main"
 import LoadingSpinner from "@src/components/spinner/LoadingSpinner"
 import GroupListFilter from "../components/GroupListFilter"
-import { Card, CardBody } from "reactstrap"
+import { Button, Card, CardBody } from "reactstrap"
 import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
+import { axiosInstance } from "../../../helper/api"
+import { Link } from 'react-router-dom'
+import ReactExport from "react-export-excel"
+
+const ExcelFile = ReactExport.ExcelFile
+const ExcelSheet = ReactExport.ExcelFile.ExcelSheet
+const ExcelColumn = ReactExport.ExcelFile.ExcelColumn
+
+const reward = (value) => {
+  if (value <= 2) {
+    return 'Gold'
+  } else if (value <= 7) {
+    return 'Voucher 1000'
+  } else if (value <= 17) {
+    return 'Voucher 300'
+  } else if (value <= 32) {
+    return 'The 1-500 Pts'
+  }
+}
+
+const columns = [
+  {
+    name: 'Name',
+    sortable: true,
+    selector: row => row.name
+  },
+  {
+    name: 'Phone',
+    sortable: true,
+    selector: row => row.phone
+  },
+  {
+    name: 'Point',
+    sortable: true,
+    center: true,
+    selector: row => row.score
+  },
+  {
+    name: 'Play Date',
+    sortable: true,
+    right: true,
+    selector: row => new Date(row.create_date).toLocaleDateString('th')
+  }
+]
 
 const Report = () => {
   const dispatch = useDispatch()
+  const [datas, setDatas] = useState([])
+  const [search, setSearch] = useState('')
+  const [dateSearch, setDateSearch] = useState([])
+  const [page, setPage] = useState(0)
+  const [perPage, setPerPage] = useState(10)
+  const { loading } = useSelector((state) => state.homeDetail)
 
-  const { mCoupon, activity, homeDetail, loading } = useSelector((state) => state.homeDetail)
-
-  const getData = async () => {
-    await dispatch(updateHomeDashboardData())
-    await dispatch(updateHomeDashboardAccountChoice())
-    await dispatch(getAccountInformation())
+  const handlePagination = (value) => {
+    setPage(value)
   }
+  const handleRowPerPage = (value) => {
+    setPerPage(value)
+  }
+  const load = () => {
+    setDatas([])
+    axiosInstance(`/dashboard/ranking?search=${search}&start=${dateSearch[0] || ''}&end=${dateSearch[1] || ''}`)
+      .then(result => {
+        setDatas(result.data.ranking)
+        dispatch(requestLoading(loading))
+      })
+  }
+  const renderExportBtn = () => (
+    <>
+      <ExcelFile element={<Button className="bg-danger">Export</Button>}>
+        <ExcelSheet data={datas} name="Report">
+          <ExcelColumn label="Name" value="name" />
+          <ExcelColumn label="Phone" value="phone" />
+          <ExcelColumn label="Point" value="score" />
+          <ExcelColumn label="Play Date"
+            value={col => (
+              new Date(col.create_date).toLocaleString('th')
+            )} />
+        </ExcelSheet>
+      </ExcelFile>
+    </>
+  )
 
   useEffect(() => {
-    getData()
-  }, [])
-
-  useEffect(() => {
+    load()
     dispatch(requestLoading(loading))
-  }, [mCoupon, activity, homeDetail, loading])
+  }, [search, dateSearch])
 
   return (
     <Fragment>
@@ -39,33 +106,26 @@ const Report = () => {
       <br />
       <Card>
         <CardBody>
-          <GroupListFilter />
+          <GroupListFilter search={search} setSearch={setSearch} exportBtn={renderExportBtn} setDateSearch={setDateSearch} />
           <DataTable
-            // data={data.data}
+            columns={columns}
+            data={datas.slice((page * perPage), ((page * perPage) + perPage))}
             // expandableRows
             // expandableRowsHideExpander={true}
-            // columns={TagColumnList(loadingDatas, onEditMember)}
-            // className="react-dataTable react-dataTable-custom-otp"
-            // sortIcon={<ChevronDown size={10} />}
-            // onSelectedRowsChange={handleChange}
-            // selectableRowsComponent={BootstrapCheckbox}
-            // selectableRowSelected={selectableRowSelected}
+            className="react-dataTable react-dataTable-custom-otp"
+          // onSelectedRowsChange={handleChange}
+          // selectableRowsComponent={BootstrapCheckbox}
+          // selectableRowSelected={selectableRowSelected}
           />
           <PaginationAndRowPerPage
-            currentPage={2}
-            perPage={5}
-            totalPage={20}
-          // handlePagination={val => handlePagination(val)}
-          // handleRowPerPage={val => handleRowPerPage(val)}
+            currentPage={page}
+            perPage={perPage}
+            totalPage={datas.length}
+            handlePagination={val => handlePagination(val)}
+            handleRowPerPage={val => handleRowPerPage(val)}
           />
         </CardBody>
       </Card>
-      {/* <HomeDashboardFilter
-        successColorShade={"#28dac6"}
-        labelColor={'#b4b7bd'}
-        tooltipShadow={'rgba(0, 0, 0, 0.25)'}
-        gridLineColor={'rgba(200, 200, 200, 0.2)'} 
-      /> */}
       <LoadingSpinner />
     </Fragment>
   )

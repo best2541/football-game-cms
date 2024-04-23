@@ -1,33 +1,62 @@
-import { Fragment, useEffect } from "react"
+import { Fragment, useEffect, useState } from "react"
 import NavbarTitle from "@src/components/navbarTitle"
 import { useDispatch, useSelector } from "react-redux"
 import DataTable from "react-data-table-component"
-import { updateHomeDashboardData, updateHomeDashboardAccountChoice } from "../store/homeDashboard/actions"
-import { getAccountInformation } from "../store/homeDetail/actions"
 import { requestLoading } from "@src/redux/actions/main"
 import LoadingSpinner from "@src/components/spinner/LoadingSpinner"
-import GroupListFilter from "../components/GroupListFilter"
-import { Card, CardBody, CardHeader, Col, Row, Input, FormGroup, Label } from "reactstrap"
+import { Card, CardBody, CardHeader, Col, Row, Input, FormGroup, Label, Button } from "reactstrap"
 import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
+import { useParams } from "react-router-dom"
+import { axiosInstance } from "../../../helper/api"
+
+const columns = [
+    {
+        name: 'No.',
+        selector: row => row.no + 1
+    },
+    {
+        name: 'Point',
+        selector: row => row.score
+    },
+    {
+        name: 'Device',
+        selector: row => row.device
+    },
+    {
+        name: 'Play Date',
+        selector: row => new Date(row.create_date).toLocaleString('th')
+    }
+]
 
 const ReportDetail = () => {
+    const { id } = useParams()
     const dispatch = useDispatch()
+    const [info, setInfo] = useState({})
+    const [datas, setDatas] = useState([])
+    const [page, setPage] = useState(0)
+    const [perPage, setPerPage] = useState(10)
+    const { loading } = useSelector((state) => state.homeDetail)
 
-    const { mCoupon, activity, homeDetail, loading } = useSelector((state) => state.homeDetail)
-
-    const getData = async () => {
-        await dispatch(updateHomeDashboardData())
-        await dispatch(updateHomeDashboardAccountChoice())
-        await dispatch(getAccountInformation())
+    const handlePagination = (value) => {
+        setPage(value)
+    }
+    const handleRowPerPage = (value) => {
+        setPerPage(value)
     }
 
     useEffect(() => {
-        getData()
-    }, [])
-
-    useEffect(() => {
+        axiosInstance(`/dashboard/ranking/${id}`)
+            .then(result => {
+                setInfo(result.data.report)
+                setDatas(result.data.table.map((data, index) => (
+                    {
+                        no: index,
+                        ...data
+                    }
+                )))
+            })
         dispatch(requestLoading(loading))
-    }, [mCoupon, activity, homeDetail, loading])
+    }, [])
 
     return (
         <Fragment>
@@ -46,25 +75,25 @@ const ReportDetail = () => {
                         <Col md='6'>
                             <FormGroup>
                                 <Label>Name</Label>
-                                <Input />
+                                <Input value={info.name} disabled />
                             </FormGroup>
                         </Col>
                         <Col md='6'>
                             <FormGroup>
                                 <Label>Ranking</Label>
-                                <Input />
+                                <Input value={info.rank} disabled />
                             </FormGroup>
                         </Col>
                         <Col md='6'>
                             <FormGroup>
                                 <Label>Total Point</Label>
-                                <Input />
+                                <Input value={info.score} disabled />
                             </FormGroup>
                         </Col>
                         <Col md='6'>
                             <FormGroup>
                                 <Label>Frequency</Label>
-                                <Input />
+                                <Input value={info.feq} disabled />
                             </FormGroup>
                         </Col>
                     </Row>
@@ -72,12 +101,17 @@ const ReportDetail = () => {
             </Card>
             <Card>
                 <CardBody>
-                    {/* <GroupListFilter /> */}
+                    <Row className="group-list-filter">
+                        <Col md='12' className="group-list-filter-card">
+                            <h1 style={{ width: '100%' }}>Records</h1>
+                            <Button className="bg-danger">Export</Button>
+                        </Col>
+                    </Row>
                     <DataTable
-                    // data={data.data}
+                        columns={columns}
+                        data={datas.slice((page * perPage), ((page * perPage) + perPage))}
                     // expandableRows
                     // expandableRowsHideExpander={true}
-                    // columns={TagColumnList(loadingDatas, onEditMember)}
                     // className="react-dataTable react-dataTable-custom-otp"
                     // sortIcon={<ChevronDown size={10} />}
                     // onSelectedRowsChange={handleChange}
@@ -85,20 +119,14 @@ const ReportDetail = () => {
                     // selectableRowSelected={selectableRowSelected}
                     />
                     <PaginationAndRowPerPage
-                        currentPage={2}
-                        perPage={5}
-                        totalPage={20}
-                    // handlePagination={val => handlePagination(val)}
-                    // handleRowPerPage={val => handleRowPerPage(val)}
+                        currentPage={page}
+                        perPage={perPage}
+                        totalPage={datas.length}
+                        handlePagination={val => handlePagination(val)}
+                        handleRowPerPage={val => handleRowPerPage(val)}
                     />
                 </CardBody>
             </Card>
-            {/* <HomeDashboardFilter
-        successColorShade={"#28dac6"}
-        labelColor={'#b4b7bd'}
-        tooltipShadow={'rgba(0, 0, 0, 0.25)'}
-        gridLineColor={'rgba(200, 200, 200, 0.2)'} 
-      /> */}
             <LoadingSpinner />
         </Fragment>
     )
