@@ -8,7 +8,7 @@ import GroupListFilter from "../components/GroupListFilter"
 import { Button, Card, CardBody, CardHeader, Col, Row } from "reactstrap"
 import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
 import Chart from "react-apexcharts"
-import { Progress } from 'antd'
+import { Progress, Tooltip } from 'antd'
 import { axiosInstance } from "../../../helper/api"
 import { convertToK } from "../../../helper/convert"
 import { groupBy } from '../../../helper/groupby'
@@ -105,69 +105,14 @@ const columns = [
     selector: row => reward(row.rank)
   }
 ]
-const data = [
-  {
-    rank: 1,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 2,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 3,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 4,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 5,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 6,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 7,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 8,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 9,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 10,
-    name: 'Beetlejuice',
-    score: '1988'
-  },
-  {
-    rank: 11,
-    name: 'Beetlejuice',
-    score: '1988'
-  }
-]
+
 const Home = () => {
   const dispatch = useDispatch()
   const [datas, setDatas] = useState([])
   const [search, setSearch] = useState('')
   const [allTimePlay, setAllTimePlay] = useState(0)
   const [totalUsers, setTotalUsers] = useState(0)
+  const [totalUsersPhone, setTotalUsersPhone] = useState(0)
   const [usersPlayToday, setUsersPlayToday] = useState(0)
   const [records, setRecords] = useState([])
   const [page, setPage] = useState(0)
@@ -212,6 +157,7 @@ const Home = () => {
       .then(async result => {
         setAllTimePlay(result.data.allTimePlay)
         setTotalUsers(result.data.totalUsers)
+        setTotalUsersPhone(result.data.totalUsersPhone)
         const playToday = groupBy(result.data.playToday, 'uid')
         const set = {}
         await result.data.playToday?.map(data => {
@@ -249,8 +195,10 @@ const Home = () => {
               <hr />
               <h5>Total all time play:</h5>
               <h1>{allTimePlay}</h1>
-              <h3 className="text-primary">Total Users:</h3>
-              <h1 className="text-primary">{totalUsers}</h1>
+              <Tooltip placement="right" title={`Phone Saved | Unsaved : ${totalUsersPhone} | ${totalUsers - totalUsersPhone}`}>
+                <h3 className="text-primary">Total Users:</h3>
+                <h1 className="text-primary">{totalUsers}</h1>
+              </Tooltip>
             </CardBody>
           </Card>
         </Col>
@@ -266,9 +214,9 @@ const Home = () => {
                 width="100%"
               />
               <div className="d-flex justify-content-between"><div>Not participate</div><div>{convertToK(totalUsers - Object.keys(usersPlayToday).length)}</div></div>
-              <Progress strokeColor='#000000' percent={((totalUsers - Object.keys(usersPlayToday).length) / totalUsers) * 100} format={(percen) => `${percen}%`} />
+              <Progress strokeColor='#000000' percent={((totalUsers - Object.keys(usersPlayToday).length) / totalUsers) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
               <div className="d-flex justify-content-between"><div>Play today</div><div>{convertToK(Object.keys(usersPlayToday).length)}</div></div>
-              <Progress strokeColor='#AE132A' percent={(Object.keys(usersPlayToday).length / totalUsers) * 100} format={(percen) => `${percen}%`} />
+              <Progress strokeColor='#AE132A' percent={(Object.keys(usersPlayToday).length / totalUsers) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
             </CardBody>
           </Card>
         </Col>

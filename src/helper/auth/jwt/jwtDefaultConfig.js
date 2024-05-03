@@ -1,6 +1,6 @@
 // ** Auth Endpoints
 export default {
-  loginEndpoint: 'http://localhost:3000/dashboard/login',
+  loginEndpoint: `${process.env.REACT_APP_API}/dashboard/login`,
   registerEndpoint: '/jwt/register',
   refreshEndpoint: '/jwt/refresh-token',
   logoutEndpoint: '/jwt/logout',
