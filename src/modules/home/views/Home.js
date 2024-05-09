@@ -39,45 +39,7 @@ const chart = {
     colors: ['#000000', '#AE132A']
   }
 }
-const chart2 = {
-  options: {
-    legend: {
-      show: false
-    },
-    labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
-    colors: ['#cfa3aa'],
-    markers: {
-      size: 5,
-      colors: '#AE132A',
-      strokeColors: '#AE132A',
-      strokeWidth: 2,
-      strokeOpacity: 0.9,
-      strokeDashArray: 0,
-      fillOpacity: 1,
-      discrete: [],
-      shape: "circle",
-      radius: 2,
-      offsetX: 0,
-      offsetY: 0,
-      onClick: undefined,
-      onDblClick: undefined,
-      showNullDataPoints: true,
-      hover: {
-        size: undefined,
-        sizeOffset: 3
-      }
-    },
-    chart: {
-      toolbar: {
-        show: false
-      }
-    },
-    title: {
-      text: 'Peak Time / Less Time',
-      align: 'left'
-    }
-  }
-}
+
 const columns = [
   {
     name: 'Rank',
@@ -110,14 +72,56 @@ const Home = () => {
   const dispatch = useDispatch()
   const [datas, setDatas] = useState([])
   const [search, setSearch] = useState('')
+  const [labels, setLabels] = useState()
   const [allTimePlay, setAllTimePlay] = useState(0)
   const [totalUsers, setTotalUsers] = useState(0)
   const [totalUsersPhone, setTotalUsersPhone] = useState(0)
   const [usersPlayToday, setUsersPlayToday] = useState(0)
+  const [usersPhonePlayToday, setUsersPhonePlayToday] = useState(0)
   const [records, setRecords] = useState([])
   const [page, setPage] = useState(0)
   const [perPage, setPerPage] = useState(10)
   const { loading } = useSelector((state) => state.homeDetail)
+
+  const chart2 = {
+    options: {
+      legend: {
+        show: false
+      },
+      labels,
+      colors: ['#cfa3aa'],
+      markers: {
+        size: 5,
+        colors: '#AE132A',
+        strokeColors: '#AE132A',
+        strokeWidth: 2,
+        strokeOpacity: 0.9,
+        strokeDashArray: 0,
+        fillOpacity: 1,
+        discrete: [],
+        shape: "circle",
+        radius: 2,
+        offsetX: 0,
+        offsetY: 0,
+        onClick: undefined,
+        onDblClick: undefined,
+        showNullDataPoints: true,
+        hover: {
+          size: undefined,
+          sizeOffset: 3
+        }
+      },
+      chart: {
+        toolbar: {
+          show: false
+        }
+      },
+      title: {
+        text: 'Peak Time / Less Time',
+        align: 'left'
+      }
+    }
+  }
 
   const handlePagination = (value) => {
     setPage(value)
@@ -155,17 +159,23 @@ const Home = () => {
   useEffect(() => {
     axiosInstance.get('/dashboard/getDashboard')
       .then(async result => {
+        console.log(result.data)
         setAllTimePlay(result.data.allTimePlay)
         setTotalUsers(result.data.totalUsers)
         setTotalUsersPhone(result.data.totalUsersPhone)
+        setUsersPhonePlayToday(result.data.usersPhonePlayToday)
         const playToday = groupBy(result.data.playToday, 'uid')
         const set = {}
+        const hours = []
         await result.data.playToday?.map(data => {
           const date = new Date(data.create_date)
           date.setHours(date.getHours())
           const hour = date.getHours()
+          // hours.push(`${hour}:00`)
           set[hour] = set[hour] ? set[hour] + 1 : 1
         })
+        await Object.keys(set)?.map(d => hours.push(`${d}:00`))
+        setLabels(hours)
         setRecords([
           {
             name: "ครั้ง",
@@ -197,7 +207,7 @@ const Home = () => {
               <h1>{allTimePlay}</h1>
               <Tooltip placement="right" title={`Phone Saved | Unsaved : ${totalUsersPhone} | ${totalUsers - totalUsersPhone}`}>
                 <h3 className="text-primary">Total Users:</h3>
-                <h1 className="text-primary">{totalUsers}</h1>
+                <h1 className="text-primary">{totalUsersPhone}</h1>
               </Tooltip>
             </CardBody>
           </Card>
@@ -208,15 +218,15 @@ const Home = () => {
               <Chart
                 colors={chart.colors}
                 options={chart.options}
-                series={[totalUsers - Object.keys(usersPlayToday).length, Object.keys(usersPlayToday).length]}
+                series={[totalUsersPhone - usersPhonePlayToday, usersPhonePlayToday]}
                 labels={chart.labels}
                 type="pie"
                 width="100%"
               />
-              <div className="d-flex justify-content-between"><div>Not participate</div><div>{convertToK(totalUsers - Object.keys(usersPlayToday).length)}</div></div>
-              <Progress strokeColor='#000000' percent={((totalUsers - Object.keys(usersPlayToday).length) / totalUsers) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
-              <div className="d-flex justify-content-between"><div>Play today</div><div>{convertToK(Object.keys(usersPlayToday).length)}</div></div>
-              <Progress strokeColor='#AE132A' percent={(Object.keys(usersPlayToday).length / totalUsers) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
+              <div className="d-flex justify-content-between"><div>Not participate</div><div>{convertToK(totalUsersPhone - usersPhonePlayToday)}</div></div>
+              <Progress strokeColor='#000000' percent={((totalUsersPhone - usersPhonePlayToday) / totalUsersPhone) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
+              <div className="d-flex justify-content-between"><div>Play today</div><div>{convertToK(usersPhonePlayToday)}</div></div>
+              <Progress strokeColor='#AE132A' percent={(usersPhonePlayToday / totalUsersPhone) * 100} format={(percen) => `${percen.toFixed(1)}%`} />
             </CardBody>
           </Card>
         </Col>

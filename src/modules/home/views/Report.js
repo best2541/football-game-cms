@@ -9,6 +9,7 @@ import { Button, Card, CardBody } from "reactstrap"
 import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
 import { axiosInstance } from "../../../helper/api"
 import { Link } from 'react-router-dom'
+import LinearProgress from '@mui/material/LinearProgress'
 import ReactExport from "react-export-excel"
 
 const ExcelFile = ReactExport.ExcelFile
@@ -54,6 +55,7 @@ const columns = [
 
 const Report = () => {
   const dispatch = useDispatch()
+  const [isLoad, setIsLoad] = useState(false)
   const [datas, setDatas] = useState([])
   const [search, setSearch] = useState('')
   const [dateSearch, setDateSearch] = useState([])
@@ -68,11 +70,16 @@ const Report = () => {
     setPerPage(value)
   }
   const load = () => {
+    setIsLoad(true)
     setDatas([])
     axiosInstance(`/dashboard/ranking?search=${search}&start=${dateSearch[0] || ''}&end=${dateSearch[1] || ''}`)
       .then(result => {
         setDatas(result.data.ranking)
         dispatch(requestLoading(loading))
+        setIsLoad(false)
+      })
+      .catch(() => {
+        setIsLoad(setIsLoad(false))
       })
   }
   const renderExportBtn = () => (
@@ -107,6 +114,7 @@ const Report = () => {
       <Card>
         <CardBody>
           <GroupListFilter search={search} setSearch={setSearch} exportBtn={renderExportBtn} setDateSearch={setDateSearch} />
+          {isLoad && <LinearProgress color="error" />}
           <DataTable
             columns={columns}
             data={datas.slice((page * perPage), ((page * perPage) + perPage))}
