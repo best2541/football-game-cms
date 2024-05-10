@@ -6,7 +6,6 @@ const { RangePicker } = DatePicker
 // import "../group.scoped.scss"
 
 const GroupListFilter = ({ search, setSearch, exportBtn, setDateSearch }) => {
-
   return (
     <Fragment>
       <Row className="">
@@ -22,7 +21,9 @@ const GroupListFilter = ({ search, setSearch, exportBtn, setDateSearch }) => {
         <Col md='5'>
           <div className="d-flex justify-content-between align-middle m-0 p-0">
             <div className="mx-1" style={{ width: '100%', marginTop: 'auto', marginBottom: 'auto' }}>
-              <RangePicker onChange={setDateSearch} style={{ width: '100%' }} />
+              {setDateSearch &&
+                <RangePicker onChange={(event) => setDateSearch(event || [])} style={{ width: '100%' }} />
+              }
             </div>
             {exportBtn && exportBtn()}
           </div>
