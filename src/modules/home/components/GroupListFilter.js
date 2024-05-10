@@ -9,8 +9,8 @@ const GroupListFilter = ({ search, setSearch, exportBtn, setDateSearch }) => {
 
   return (
     <Fragment>
-      <Row className="group-list-filter">
-        <Col md='12' className="group-list-filter-card">
+      <Row className="">
+        <Col md='7' className="group-list-filter-card">
           <Search className='icon-search-point' color="#5E5873" size={24} />
           <Input
             value={search}
@@ -18,9 +18,11 @@ const GroupListFilter = ({ search, setSearch, exportBtn, setDateSearch }) => {
             placeholder='Search'
             onChange={(e) => setSearch(e.target.value)}
           />
+        </Col>
+        <Col md='5'>
           <div className="d-flex justify-content-between align-middle m-0 p-0">
             <div className="mx-1" style={{ width: '100%', marginTop: 'auto', marginBottom: 'auto' }}>
-              <RangePicker onChange={setDateSearch} />
+              <RangePicker onChange={setDateSearch} style={{ width: '100%' }} />
             </div>
             {exportBtn && exportBtn()}
           </div>

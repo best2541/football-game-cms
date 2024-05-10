@@ -132,7 +132,7 @@ const Home = () => {
 
   const renderExportBtn = () => (
     <>
-      <ExcelFile element={<Button className="bg-danger">Export</Button>}>
+      <ExcelFile filename={`Dashboard-${new Date().toLocaleString('th')}`} element={<Button className="bg-danger">Export</Button>}>
         <ExcelSheet data={datas} name="Ranking">
           <ExcelColumn label="Rank" value="rank" />
           <ExcelColumn label="Name" value="name" />

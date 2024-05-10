@@ -49,7 +49,7 @@ const columns = [
     name: 'Play Date',
     sortable: true,
     right: true,
-    selector: row => new Date(row.create_date).toLocaleDateString('th')
+    selector: row => new Date(row.create_date).toLocaleString('th')
   }
 ]
 
@@ -84,7 +84,7 @@ const Report = () => {
   }
   const renderExportBtn = () => (
     <>
-      <ExcelFile element={<Button className="bg-danger">Export</Button>}>
+      <ExcelFile filename={`Report-${new Date().toLocaleString('th')}`} element={<Button className="bg-danger">Export</Button>}>
         <ExcelSheet data={datas} name="Report">
           <ExcelColumn label="Name" value="name" />
           <ExcelColumn label="Phone" value="phone" />
