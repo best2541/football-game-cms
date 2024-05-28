@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // ** Configs
-import themeConfig from '@configs/themeConfig'
+import themeConfig from '../../configs/themeConfig'
 
 export const useNavbarColor = () => {
   // ** State

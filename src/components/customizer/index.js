@@ -7,10 +7,10 @@ import classnames from 'classnames'
 import { Settings, X } from 'react-feather'
 import { CustomInput, FormGroup } from 'reactstrap'
 import PerfectScrollbar from 'react-perfect-scrollbar'
-import { selectThemeColors } from '@utils'
+import { selectThemeColors } from '../../utility/Utils'
 
 // ** Styles
-import '@src/assets/scss/react/libs/react-select/_react-select.scss'
+import '../../../src/assets/scss/react/libs/react-select/_react-select.scss'
 
 const Customizer = props => {
   // ** Props

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 
 // ** Store & Actions
 import { useSelector, useDispatch } from 'react-redux'
-import { handleMenuCollapsed, handleContentWidth, handleMenuHidden } from '@store/actions/layout'
+import { handleMenuCollapsed, handleContentWidth, handleMenuHidden } from '../redux/actions/layout'
 
 // ** Third Party Components
 import classnames from 'classnames'
@@ -13,24 +13,24 @@ import ScrollToTop from 'react-scroll-up'
 import { Navbar, Button } from 'reactstrap'
 
 // ** Configs
-import themeConfig from '@configs/themeConfig'
-
+// import themeConfig from './configs/themeConfig'
+import themeConfig from '../configs/themeConfig'
 // ** Custom Components
-import Customizer from '@src/components/customizer'
+import Customizer from '../components/customizer'
 import FooterComponent from './components/footer'
 import NavbarComponent from './components/navbar'
 import SidebarComponent from './components/menu/vertical-menu'
 
 // ** Custom Hooks
-import { useRTL } from '@hooks/useRTL'
-import { useSkin } from '@hooks/useSkin'
-import { useNavbarType } from '@hooks/useNavbarType'
-import { useFooterType } from '@hooks/useFooterType'
-import { useNavbarColor } from '@hooks/useNavbarColor'
+import { useRTL } from '../utility/hooks/useRTL'
+import { useSkin } from '../utility/hooks/useSkin'
+import { useNavbarType } from '../utility/hooks/useNavbarType'
+import { useFooterType } from '../utility/hooks/useFooterType'
+import { useNavbarColor } from '../utility/hooks/useNavbarColor'
 
 // ** Styles
-import '@src/assets/scss/base/core/menu/menu-types/vertical-menu.scss'
-import '@src/assets/scss/base/core/menu/menu-types/vertical-overlay-menu.scss'
+import '../assets/scss/base/core/menu/menu-types/vertical-menu.scss'
+import '../assets/scss/base/core/menu/menu-types/vertical-overlay-menu.scss'
 
 const VerticalLayout = props => {
   // ** Props

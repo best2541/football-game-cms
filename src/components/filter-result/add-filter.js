@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { X } from "react-feather"
 import { Card, CardBody, CardHeader, Input, Label } from "reactstrap"
 import "./css/index.css"
-import { selectThemeColors } from "@utils"
+import { selectThemeColors } from "../../utility/Utils"
 import Select from "react-select"
 
 const Addfilter = (props) => {

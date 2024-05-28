@@ -1,8 +1,8 @@
 import { Fragment, useState, useEffect } from "react"
-import avatarImg from '@src/assets/images/portrait/small/avatar-s-20.jpg'
-import Avatar from '@components/avatar'
+import avatarImg from '../../../../assets/images/portrait/small/avatar-s-20.jpg'
+import Avatar from '../../../../components/avatar'
 import { Badge, Button } from "reactstrap"
-import { isUserLoggedIn } from '@utils'
+import { isUserLoggedIn } from '../../../../utility/Utils'
 
 // ** Store & Actions
 import { useDispatch } from 'react-redux'
@@ -28,7 +28,7 @@ const UserManagement = () => {
         <div className="user-nav d-sm-flex d-flex">
           <div>
             <div>
-              <li className= "menu-item text-truncate username-vertical" >{(userData && userData['username']) || 'John Doe'}</li>
+              <li className="menu-item text-truncate username-vertical" >{(userData && userData['username']) || 'John Doe'}</li>
             </div>
             <div>
               <li className="menu-item text-truncate credit-balance-vertical" >Credit Balance : <Badge className="credit-balance-badge ml-25" color="danger" pill >500k</Badge></li>

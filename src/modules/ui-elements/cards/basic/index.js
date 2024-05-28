@@ -7,7 +7,7 @@ import CardContentTypes from './CardContentTypes'
 import CardTextAlignment from './CardTextAlignment'
 import CardStyleVariation from './CardStyleVariation'
 import CardLayout from './CardLayout'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../../components/breadcrumbs'
 const BasicCards = () => {
   return (
     <Fragment>

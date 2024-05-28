@@ -3,7 +3,7 @@ import HomeDetailBox from "./HomeDetailBox"
 import { useSelector, useDispatch } from "react-redux"
 import { Row, Col } from 'reactstrap'
 import { MessageSquare, Archive } from "react-feather"
-import { ReactComponent as Credit } from "@src/assets/images/svg/Credit.svg"
+import { ReactComponent as Credit } from "../../../../assets/images/svg/Credit.svg"
 
 const HomeDetail = () => {
   const { homeDetail } = useSelector((state) => state.homeDetail)

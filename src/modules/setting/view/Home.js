@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from "react"
-import NavbarTitle from "@src/components/navbarTitle"
+import NavbarTitle from "../../../components/navbarTitle"
 import { useDispatch, useSelector } from "react-redux"
-import { requestLoading } from "@src/redux/actions/main"
 import { Card, CardBody, CardFooter, CardHeader, Col, Row } from "reactstrap"
 import { Button, Tooltip, Input } from 'antd'
 import { axiosInstance } from "../../../helper/api"

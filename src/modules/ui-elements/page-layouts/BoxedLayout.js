@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Alert } from 'reactstrap'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../components/breadcrumbs'
 import Ecommerce from '../../dashboard/ecommerce'
 
 const BoxedLayout = () => {

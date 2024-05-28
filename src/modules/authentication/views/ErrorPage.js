@@ -16,7 +16,7 @@ const ErrorPage = () => {
     <Fragment>
         <div className="error-page-background">
           <Label>Error</Label>
-          <CardImg src={require('@src/assets/images/error/error.png').default} className="error-img" />
+          <CardImg src={require('../../../assets/images/error/error.png').default} className="error-img" />
         </div>
     </Fragment>
   )

@@ -3,21 +3,21 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // ** Custom Components
-import Avatar from '@components/avatar'
+import Avatar from '../../../components/avatar'
 
 // ** Utils
-import { isUserLoggedIn } from '@utils'
+import { isUserLoggedIn } from '../../../utility/Utils'
 
 // ** Store & Actions
 import { useDispatch } from 'react-redux'
-import { handleLogout } from '@store/actions/auth'
+import { handleLogout } from '../../../redux/actions/auth'
 
 // ** Third Party Components
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
 import { User, Mail, CheckSquare, MessageSquare, Settings, CreditCard, HelpCircle, Power } from 'react-feather'
 
 // ** Default Avatar Image
-import defaultAvatar from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+import defaultAvatar from '../../../assets/images/portrait/small/avatar-s-11.jpg'
 
 const UserDropdown = () => {
   // ** Store Vars

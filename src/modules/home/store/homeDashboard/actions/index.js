@@ -5,7 +5,7 @@ import {
   UPDATE_HOME_DASHBOARD_FILTER
 } from "./types"
 import { dashboardData, accountChoice } from "../../../domain/home.mock"
-import { notifySuccess, notifyFailed } from "@src/components/toast/notifyTopCenter"
+import { notifySuccess, notifyFailed } from "../../../../../components/toast/notifyTopCenter"
 
 export const updateHomeDashboardData = (filter) => async (dispatch) => {
   try {

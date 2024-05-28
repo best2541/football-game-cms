@@ -3,8 +3,8 @@ import {
   REQUEST_DROPDOWN_LIST_FROM,
   REQUEST_LOADING
 } from "./types"
-import { axiosInstance } from "@src/helper/api"
-import useJwt from '@src/helper/auth/jwt/jwtDefaultConfig'
+import { axiosInstance } from "../../../helper/api"
+import useJwt from '../../../helper/auth/jwt/jwtDefaultConfig'
 
 const commuEndPoint = useJwt.commuEndPoint
 

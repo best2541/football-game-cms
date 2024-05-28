@@ -10,10 +10,10 @@ import { AlertCircle } from 'react-feather'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 // ** Custom Hooks
-import { useOnClickOutside } from '@hooks/useOnClickOutside'
+import { useOnClickOutside } from '../../utility/hooks/useOnClickOutside'
 
 // ** Styles
-import '@src/assets/scss/base/bootstrap-extended/_include.scss'
+import '../../../src/assets/scss/base/bootstrap-extended/_include.scss'
 import './autocomplete.scss'
 
 const Autocomplete = props => {

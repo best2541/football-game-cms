@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
-import Breadcrumbs from '@src/components/breadcrumbs'
-import CardAction from '@components/card-actions'
+import Breadcrumbs from '../../../../components/breadcrumbs'
+import CardAction from '../../../../components/card-actions'
 import { ChevronDown, RotateCw, X } from 'react-feather'
 import { CardBody, CardText, Row, Col, Table } from 'reactstrap'
 

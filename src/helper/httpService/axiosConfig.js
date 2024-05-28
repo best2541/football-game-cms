@@ -1,7 +1,7 @@
 // src/apis/configs/axiosConfigs.js
 
 import axios from 'axios'
-import useJwt from '@src/helper/auth/jwt/jwtDefaultConfig'
+import useJwt from '../../helper/auth/jwt/jwtDefaultConfig'
 
 // export const api = axios.create({
 //   withCredentials: true,

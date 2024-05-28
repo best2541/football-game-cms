@@ -1,6 +1,6 @@
 import { Fragment, useContext } from 'react'
 import { Row, Col } from 'reactstrap'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../../components/breadcrumbs'
 import SessionByDevice from './SessionByDevice'
 import ProductOrders from './ProductOrders'
 import Customers from './Customers'
@@ -12,9 +12,9 @@ import GoalOverview from './GoalOverview'
 import AvgSession from './AvgSessions'
 import Sales2 from './Sales2'
 import Earnings from './Earnings'
-import { ThemeColors } from '@src/utility/context/ThemeColors'
+import { ThemeColors } from '../../../../utility/context/ThemeColors'
 
-import '@src/assets/scss/react/libs/charts/apex-charts.scss'
+import '../../../../assets/scss/react/libs/charts/apex-charts.scss'
 
 const AnalyticsCards = () => {
   const context = useContext(ThemeColors)

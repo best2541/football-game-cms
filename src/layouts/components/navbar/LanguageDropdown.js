@@ -5,7 +5,7 @@ import ReactCountryFlag from 'react-country-flag'
 import { UncontrolledDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
 
 // ** Context
-import { IntlContext } from '@src/utility/context/Internationalization'
+import { IntlContext } from '../../../utility/context/Internationalization'
 
 const LanguageDropdown = () => {
   // ** Context

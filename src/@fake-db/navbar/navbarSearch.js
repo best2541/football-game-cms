@@ -940,25 +940,25 @@ export const searchArr = [
         title: 'Passport Image',
         by: 'Oliver Queen',
         size: '52kb',
-        file: require('@src/assets/images/icons/jpg.png').default
+        file: require('../../../src/assets/images/icons/jpg.png').default
       },
       {
         title: 'Parenting Guide',
         by: 'Alfred Pennyworth',
         size: '2.3mb',
-        file: require('@src/assets/images/icons/doc.png').default
+        file: require('../../../src/assets/images/icons/doc.png').default
       },
       {
         title: 'Class Notes',
         by: 'Barry Allen',
         size: '30kb',
-        file: require('@src/assets/images/icons/doc.png').default
+        file: require('../../../src/assets/images/icons/doc.png').default
       },
       {
         title: 'Class Attendance',
         by: 'Walter White',
         size: '52mb',
-        file: require('@src/assets/images/icons/xls.png').default
+        file: require('../../../src/assets/images/icons/xls.png').default
       }
     ]
   },
@@ -969,25 +969,25 @@ export const searchArr = [
       {
         title: 'Mia Davis',
         email: 'miadavis@teleworm.us',
-        img: require('@src/assets/images/portrait/small/avatar-s-8.jpg').default,
+        img: require('../../../src/assets/images/portrait/small/avatar-s-8.jpg').default,
         date: '01/03/2020'
       },
       {
         title: 'Norris Carrière',
         email: 'NorrisCarriere@rhyta.com',
-        img: require('@src/assets/images/portrait/small/avatar-s-3.jpg').default,
+        img: require('../../../src/assets/images/portrait/small/avatar-s-3.jpg').default,
         date: '07/03/2020'
       },
       {
         title: 'Charlotte Gordon',
         email: 'CharlotteGordon@jourrapide.com',
-        img: require('@src/assets/images/portrait/small/avatar-s-26.jpg').default,
+        img: require('../../../src/assets/images/portrait/small/avatar-s-26.jpg').default,
         date: '14/03/2020'
       },
       {
         title: 'Robert Nash',
         email: 'RobertNash@dayrep.com',
-        img: require('@src/assets/images/portrait/small/avatar-s-25.jpg').default,
+        img: require('../../../src/assets/images/portrait/small/avatar-s-25.jpg').default,
         date: '21/03/2020'
       }
     ]

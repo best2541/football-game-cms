@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import PropTypes from 'prop-types'
 import { Row, Col } from "reactstrap"
-import BreadCrumbs from '@src/components/breadcrumbs'
+import BreadCrumbs from '../../../src/components/breadcrumbs'
 
 const NavbarTitle = (props) => {
   const { breadCrumbTitle, breadCrumbActive, breadCrumbParent, className} = props

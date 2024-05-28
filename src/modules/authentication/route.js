@@ -3,7 +3,7 @@ import { lazy } from "react"
 const AuthenticationRoutes = [
   {
     path: "/updatepassword",
-    component: lazy(() => import("@modules/authentication/views/UpdatePassword.js")),
+    component: lazy(() => import("../../modules/authentication/views/UpdatePassword.js")),
     layout: 'BlankLayout',
     meta: {
       authRoute: true
@@ -11,7 +11,7 @@ const AuthenticationRoutes = [
   },
   {
     path: "/login",
-    component: lazy(() => import("@modules/authentication/views/Login.js")),
+    component: lazy(() => import("../../modules/authentication/views/Login.js")),
     layout: 'BlankLayout',
     meta: {
       authRoute: true

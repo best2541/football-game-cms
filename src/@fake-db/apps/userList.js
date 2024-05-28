@@ -27,7 +27,7 @@ const data = {
       email: 'hredmore1@imgur.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('../../../src/assets/images/avatars/10.png').default
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const data = {
       email: 'msicely2@who.int',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('../../../src/assets/images/avatars/1.png').default
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const data = {
       email: 'crisby3@wordpress.com',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const data = {
       email: 'mhurran4@yahoo.co.jp',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('../../../src/assets/images/avatars/10.png').default
     },
     {
       id: 6,
@@ -105,7 +105,7 @@ const data = {
       email: 'kliger7@vinaora.com',
       currentPlan: 'enterprise',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     },
     {
       id: 9,
@@ -118,7 +118,7 @@ const data = {
       email: 'fscotfurth8@dailymotion.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('../../../src/assets/images/avatars/2.png').default
     },
     {
       id: 10,
@@ -131,7 +131,7 @@ const data = {
       email: 'jbellany9@kickstarter.com',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     },
     {
       id: 11,
@@ -144,7 +144,7 @@ const data = {
       email: 'jwharltona@oakley.com',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('../../../src/assets/images/avatars/4.png').default
     },
     {
       id: 12,
@@ -157,7 +157,7 @@ const data = {
       email: 'shallamb@hugedomains.com',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/5.png').default
+      avatar: require('../../../src/assets/images/avatars/5.png').default
     },
     {
       id: 13,
@@ -170,7 +170,7 @@ const data = {
       email: 'ypottiec@privacy.gov.au',
       currentPlan: 'basic',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('../../../src/assets/images/avatars/7.png').default
     },
     {
       id: 14,
@@ -183,7 +183,7 @@ const data = {
       email: 'mkraused@stanford.edu',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     },
     {
       id: 15,
@@ -196,7 +196,7 @@ const data = {
       email: 'zmcclevertye@soundcloud.com',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('../../../src/assets/images/avatars/2.png').default
     },
     {
       id: 16,
@@ -209,7 +209,7 @@ const data = {
       email: 'bemblinf@wired.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('../../../src/assets/images/avatars/6.png').default
     },
     {
       id: 17,
@@ -235,7 +235,7 @@ const data = {
       email: 'bbinerh@mozilla.com',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('../../../src/assets/images/avatars/7.png').default
     },
     {
       id: 19,
@@ -261,7 +261,7 @@ const data = {
       email: 'wburlandj@uiuc.edu',
       currentPlan: 'team',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('../../../src/assets/images/avatars/6.png').default
     },
     {
       id: 21,
@@ -274,7 +274,7 @@ const data = {
       email: 'irena.dubrovna@wayne.com',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('../../../src/assets/images/avatars/1.png').default
     },
     {
       id: 22,
@@ -287,7 +287,7 @@ const data = {
       email: 'jlysterl@guardian.co.uk',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/8.png').default
+      avatar: require('../../../src/assets/images/avatars/8.png').default
     },
     {
       id: 23,
@@ -300,7 +300,7 @@ const data = {
       email: 'kskitterelm@washingtonpost.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/3.png').default
+      avatar: require('../../../src/assets/images/avatars/3.png').default
     },
     {
       id: 24,
@@ -313,7 +313,7 @@ const data = {
       email: 'chatherleighn@washington.edu',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/2.png').default
+      avatar: require('../../../src/assets/images/avatars/2.png').default
     },
     {
       id: 25,
@@ -339,7 +339,7 @@ const data = {
       email: 'hhassonp@bizjournals.com',
       currentPlan: 'basic',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('../../../src/assets/images/avatars/4.png').default
     },
     {
       id: 27,
@@ -352,7 +352,7 @@ const data = {
       email: 'gjacombsq@jigsy.com',
       currentPlan: 'enterprise',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/10.png').default
+      avatar: require('../../../src/assets/images/avatars/10.png').default
     },
     {
       id: 28,
@@ -378,7 +378,7 @@ const data = {
       email: 'cpinyons@behance.net',
       currentPlan: 'team',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/7.png').default
+      avatar: require('../../../src/assets/images/avatars/7.png').default
     },
     {
       id: 30,
@@ -404,7 +404,7 @@ const data = {
       email: 'gmeinekenu@hc360.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('../../../src/assets/images/avatars/1.png').default
     },
     {
       id: 32,
@@ -417,7 +417,7 @@ const data = {
       email: 'rsnowballv@indiegogo.com',
       currentPlan: 'basic',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/5.png').default
+      avatar: require('../../../src/assets/images/avatars/5.png').default
     },
     {
       id: 33,
@@ -430,7 +430,7 @@ const data = {
       email: 'remerw@blogtalkradio.com',
       currentPlan: 'basic',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/8.png').default
+      avatar: require('../../../src/assets/images/avatars/8.png').default
     },
     {
       id: 34,
@@ -443,7 +443,7 @@ const data = {
       email: 'ofibbensx@booking.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/4.png').default
+      avatar: require('../../../src/assets/images/avatars/4.png').default
     },
     {
       id: 35,
@@ -482,7 +482,7 @@ const data = {
       email: 'shebblethwaite10@arizona.edu',
       currentPlan: 'company',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     },
     {
       id: 38,
@@ -495,7 +495,7 @@ const data = {
       email: 'mpiccard11@vimeo.com',
       currentPlan: 'enterprise',
       status: 'inactive',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('../../../src/assets/images/avatars/1.png').default
     },
     {
       id: 39,
@@ -521,7 +521,7 @@ const data = {
       email: 'fdesporte13@omniture.com',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/6.png').default
+      avatar: require('../../../src/assets/images/avatars/6.png').default
     },
     {
       id: 41,
@@ -586,7 +586,7 @@ const data = {
       email: 'cperot18@goo.ne.jp',
       currentPlan: 'team',
       status: 'pending',
-      avatar: require('@src/assets/images/avatars/3.png').default
+      avatar: require('../../../src/assets/images/avatars/3.png').default
     },
     {
       id: 46,
@@ -612,7 +612,7 @@ const data = {
       email: 'kcourtliff1a@bbc.co.uk',
       currentPlan: 'basic',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/1.png').default
+      avatar: require('../../../src/assets/images/avatars/1.png').default
     },
     {
       id: 48,
@@ -651,7 +651,7 @@ const data = {
       email: 'bkrabbe1d@home.pl',
       currentPlan: 'company',
       status: 'active',
-      avatar: require('@src/assets/images/avatars/9.png').default
+      avatar: require('../../../src/assets/images/avatars/9.png').default
     }
   ]
 }

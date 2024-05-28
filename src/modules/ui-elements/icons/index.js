@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import classnames from 'classnames'
 import { toast } from 'react-toastify'
 import * as Icons from 'react-feather'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../components/avatar'
 import {
   Card,
   CardBody,
@@ -15,10 +15,10 @@ import {
   InputGroupText,
   UncontrolledTooltip
 } from 'reactstrap'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../components/breadcrumbs'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import '@src/assets/scss/base/pages/ui-feather.scss'
+import '../../../assets/scss/base/pages/ui-feather.scss'
 
 const ToastContent = ({ icon }) => (
   <Fragment>

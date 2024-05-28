@@ -8,10 +8,10 @@ import classnames from 'classnames'
 import { FormattedMessage } from 'react-intl'
 
 // ** Vertical Menu Array Of Items
-import navigation from '@src/navigation/vertical'
+import navigation from '../../../../navigation/vertical'
 
 // ** Utils
-import { isNavLinkActive, search, getAllParents } from '@layouts/utils'
+import { isNavLinkActive, search, getAllParents } from '../../../../layouts/utils'
 import { useDispatch } from 'react-redux'
 import { handleLogout } from '../../../../redux/actions/auth'
 

@@ -1,20 +1,19 @@
 import { useState, useContext, Fragment, useEffect } from 'react'
 import classnames from 'classnames'
-import { useSkin } from '@hooks/useSkin'
-import useJwt from '@src/utility/auth/jwt/useJwt'
+import { useSkin } from '../../../utility/hooks/useSkin'
+import useJwt from '../../../utility/auth/jwt/useJwt'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import { handleLogin } from '@store/actions/auth'
-import { AbilityContext } from '@src/utility/context/Can'
+import { handleLogin } from '../../../redux/actions/auth'
+import { AbilityContext } from '../../../utility/context/Can'
 import { Link, useHistory } from 'react-router-dom'
-import InputPasswordLogin from '@src/components/input-password-toggle/InputPasswordLogin'
-import { getHomeRouteForLoggedInUser, isObjEmpty } from '@utils'
-import background from "@src/assets/images/logo/Image.png"
-import icon from "@src/assets/images/img/icon-britz.png"
+import InputPasswordLogin from '../../../components/input-password-toggle/InputPasswordLogin'
+import { getHomeRouteForLoggedInUser, isObjEmpty } from '../../../utility/Utils'
+import background from "../../../assets/images/logo/Image.png"
+import icon from "../../../assets/images/img/icon-britz.png"
 import { updateUserName } from '../store/login/actions'
 import { Row, Col, CardTitle, CardText, Form, Input, FormGroup, Label, CustomInput, Button } from 'reactstrap'
-import '@src/assets/scss/base/pages/page-auth.scss'
-import axios from 'axios'
+import '../../../assets/scss/base/pages/page-auth.scss'
 
 const Login = () => {
   const [skin, setSkin] = useSkin()
@@ -26,8 +25,7 @@ const Login = () => {
   const [error, setError] = useState(false)
   const { register, errors, handleSubmit } = useForm()
   const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
-    source = require(`@src/assets/images/pages/${illustration}`).default
-
+    source = require(`../../../assets/images/pages/${illustration}`).default
   const onSubmit = data => {
     if (isObjEmpty(errors)) { //check error validate
       // localStorage.setItem('menuStatus', true)
@@ -69,7 +67,7 @@ const Login = () => {
       </div>
       <Row className='auth-inner m-0'>
         <Link className='brand-logo' to='/' onClick={e => e.preventDefault()}>
-          <img src={icon} style={{ width: "40%", height: "40%", position: "relative", right: "85px" }} alt='logo' />
+          <img src={icon} style={{ width: "70px", height: "auto", position: "fixed", left: "3%" }} alt='logo' />
         </Link>
         <Col className='d-none d-lg-flex align-items-center p-5' lg='8' sm='12' style={{ backgroundColor: 'white' }}>
           <div className='w-100 d-lg-flex align-items-center justify-content-center px-5'>
@@ -117,9 +115,9 @@ const Login = () => {
                   onClick={() => changeError()}
                 />
               </FormGroup>
-              <FormGroup>
+              {/* <FormGroup>
                 <CustomInput type='checkbox' className='custom-control-Primary' id='remember-me' label='Remember Me' />
-              </FormGroup>
+              </FormGroup> */}
               <Button type='submit' color='primary' block>
                 Login
               </Button>

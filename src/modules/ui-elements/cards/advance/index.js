@@ -10,11 +10,11 @@ import CardBusiness from './CardBusiness'
 import CardAppDesign from './CardAppDesign'
 import CardUserTimeline from './CardUserTimeline'
 import CardBrowserState from './CardBrowserState'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../../components/breadcrumbs'
 import CardTransactions from './CardTransactions'
 import CardEmployeesTasks from './CardEmployeesTask'
 import CardCongratulations from './CardCongratulations'
-import { ThemeColors } from '@src/utility/context/ThemeColors'
+import { ThemeColors } from '../../../../utility/context/ThemeColors'
 
 const Cards = () => {
   const { colors } = useContext(ThemeColors),

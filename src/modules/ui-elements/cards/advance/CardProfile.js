@@ -1,7 +1,7 @@
-import Avatar from '@src/components/avatar'
-import coverImg from '@src/assets/images/banner/banner-12.jpg'
+import Avatar from '../../../../components/avatar'
+import coverImg from '../../../../assets/images/banner/banner-12.jpg'
 import { Card, CardBody, CardImg, Badge } from 'reactstrap'
-import profileImg from '@src/assets/images/portrait/small/avatar-s-9.jpg'
+import profileImg from '../../../../assets/images/portrait/small/avatar-s-9.jpg'
 
 const CardProfile = () => {
   return (

@@ -1,13 +1,13 @@
 import classnames from 'classnames'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../../components/avatar'
 import { useState, useEffect } from 'react'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import { MoreVertical, Send, Image } from 'react-feather'
 import { Card, CardHeader, Form, Label, InputGroup, InputGroupAddon, Input, InputGroupText, Button } from 'reactstrap'
 
-import profilePic from '@src/assets/images/portrait/small/avatar-s-11.jpg'
+import profilePic from '../../../../assets/images/portrait/small/avatar-s-11.jpg'
 
-import '@src/assets/scss/base/pages/app-chat-list.scss'
+import '../../../../assets/scss/base/pages/app-chat-list.scss'
 
 const data = {
   chat: {
@@ -46,7 +46,7 @@ const data = {
   contact: {
     id: 1,
     fullName: 'Felecia Rower',
-    avatar: require('@src/assets/images/portrait/small/avatar-s-20.jpg').default,
+    avatar: require('../../../../assets/images/portrait/small/avatar-s-20.jpg').default,
     status: 'away'
   }
 }

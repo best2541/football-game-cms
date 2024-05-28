@@ -1,6 +1,6 @@
 // ** Routes Imports
 import AuthenticationRoutes from '../../modules/authentication/route'
-import HomeRoutes from '@modules/home/route'
+import HomeRoutes from '../../modules/home/route'
 import Setting from './Setting'
 import { lazy } from 'react'
 

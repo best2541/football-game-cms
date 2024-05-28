@@ -4,10 +4,10 @@ const data = {
   // blog list
   blogList: [
     {
-      img: require('@src/assets/images/slider/02.jpg').default,
+      img: require('../../../src/assets/images/slider/02.jpg').default,
       title: 'The Best Features Coming to iOS and Web design',
       id: 1,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-7.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-7.jpg').default,
       userFullName: 'Ghani Pradita',
       blogPosted: 'Jan 10, 2020',
       tags: ['Quote', 'Fashion'],
@@ -15,10 +15,10 @@ const data = {
       comment: 76
     },
     {
-      img: require('@src/assets/images/slider/06.jpg').default,
+      img: require('../../../src/assets/images/slider/06.jpg').default,
       title: 'Latest Quirky Opening Sentence or Paragraph',
       id: 2,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default,
       userFullName: 'Jorge Griffin',
       blogPosted: 'Jan 10, 2020',
       tags: ['Gaming', 'Video'],
@@ -26,10 +26,10 @@ const data = {
       comment: 2100
     },
     {
-      img: require('@src/assets/images/slider/04.jpg').default,
+      img: require('../../../src/assets/images/slider/04.jpg').default,
       title: 'Share an Amazing and Shocking Fact or Statistic',
       id: 3,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-3.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-3.jpg').default,
       userFullName: 'Claudia Neal',
       blogPosted: 'Jan 10, 2020',
       tags: ['Gaming', 'Food'],
@@ -37,10 +37,10 @@ const data = {
       comment: 243
     },
     {
-      img: require('@src/assets/images/slider/03.jpg').default,
+      img: require('../../../src/assets/images/slider/03.jpg').default,
       title: 'Withhold a Compelling Piece of Information',
       id: 4,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-14.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-14.jpg').default,
       userFullName: 'Fred Boone',
       blogPosted: 'Jan 10, 2020',
       tags: ['Video'],
@@ -48,10 +48,10 @@ const data = {
       comment: 10
     },
     {
-      img: require('@src/assets/images/slider/09.jpg').default,
+      img: require('../../../src/assets/images/slider/09.jpg').default,
       title: 'Unadvertised Bonus Opening: Share a Quote',
       id: 5,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-13.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-13.jpg').default,
       userFullName: 'Billy French',
       blogPosted: 'Jan 10, 2020',
       tags: ['Quote', 'Fashion'],
@@ -59,10 +59,10 @@ const data = {
       comment: 319
     },
     {
-      img: require('@src/assets/images/slider/10.jpg').default,
+      img: require('../../../src/assets/images/slider/10.jpg').default,
       title: 'Ships at a distance have Every Man’s Wish on Board',
       id: 6,
-      avatar: require('@src/assets/images/portrait/small/avatar-s-13.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-13.jpg').default,
       userFullName: 'Helena Hunt',
       blogPosted: 'Jan 10, 2020',
       tags: ['Fashion', 'Video'],
@@ -75,25 +75,25 @@ const data = {
   blogSidebar: {
     recentPosts: [
       {
-        img: require('@src/assets/images/banner/banner-22.jpg').default,
+        img: require('../../../src/assets/images/banner/banner-22.jpg').default,
         title: 'Why Should Forget Facebook?',
         id: 7,
         createdTime: 'Jan 14 2020'
       },
       {
-        img: require('@src/assets/images/banner/banner-27.jpg').default,
+        img: require('../../../src/assets/images/banner/banner-27.jpg').default,
         title: 'Publish your passions, your way',
         id: 8,
         createdTime: 'Mar 04 2020'
       },
       {
-        img: require('@src/assets/images/banner/banner-39.jpg').default,
+        img: require('../../../src/assets/images/banner/banner-39.jpg').default,
         title: 'The Best Ways to Retain More',
         id: 9,
         createdTime: 'Feb 18 2020'
       },
       {
-        img: require('@src/assets/images/banner/banner-35.jpg').default,
+        img: require('../../../src/assets/images/banner/banner-35.jpg').default,
         title: 'Share a Shocking Fact or Statistic',
         id: 10,
         createdTime: 'Oct 08 2020'
@@ -111,9 +111,9 @@ const data = {
   // detail
   blogDetail: {
     blog: {
-      img: require('@src/assets/images/banner/banner-12.jpg').default,
+      img: require('../../../src/assets/images/banner/banner-12.jpg').default,
       title: 'The Best Features Coming to iOS and Web design',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-7.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-7.jpg').default,
       userFullName: 'Ghani Pradita',
       createdTime: 'Jan 10, 2020',
       tags: ['Gaming', 'Video'],
@@ -124,7 +124,7 @@ const data = {
     },
     comments: [
       {
-        avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+        avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default,
         userFullName: 'Chad Alexander',
         commentedAt: 'May 24, 2020',
         commentText:
@@ -135,7 +135,7 @@ const data = {
 
   // edit
   blogEdit: {
-    avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+    avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default,
     userFullName: 'Chad Alexander',
     createdTime: 'May 24, 2020',
     blogTitle: 'The Best Features Coming to iOS and Web design',
@@ -147,7 +147,7 @@ const data = {
     status: 'Published',
     excerpt:
       '<p>Cupcake ipsum dolor sit. Amet dessert donut candy chocolate bar cotton dessert candy chocolate. Candy muffin danish. Macaroon brownie jelly beans marzipan cheesecake oat cake. Carrot cake macaroon chocolate cake. Jelly brownie jelly. Marzipan pie sweet roll.</p><p><br></p><p>Liquorice dragée cake chupa chups pie cotton candy jujubes bear claw sesame snaps. Fruitcake chupa chups chocolate bonbon lemon drops croissant caramels lemon drops. Candy jelly cake marshmallow jelly beans dragée macaroon. Gummies sugar plum fruitcake. Candy canes candy cupcake caramels cotton candy jujubes fruitcake.</p>',
-    featuredImage: require('@src/assets/images/slider/03.jpg').default
+    featuredImage: require('../../../src/assets/images/slider/03.jpg').default
   }
 }
 

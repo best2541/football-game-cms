@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../../components/avatar'
 import { TrendingUp, User, Box, DollarSign } from 'react-feather'
 import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Media } from 'reactstrap'
 

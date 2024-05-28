@@ -1,5 +1,5 @@
 // ** UseJWT import to get config
-import useJwt from '@src/utility/auth/jwt/useJwt'
+import useJwt from '../../../utility/auth/jwt/useJwt'
 
 const config = useJwt.jwtConfig
 

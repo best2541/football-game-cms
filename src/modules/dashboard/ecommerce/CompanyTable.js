@@ -1,11 +1,11 @@
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../components/avatar'
 import { Table, Card } from 'reactstrap'
 import { Monitor, Coffee, Watch, TrendingUp, TrendingDown } from 'react-feather'
 
 const CompanyTable = () => {
   const data = [
       {
-        img: require('@src/assets/images/icons/toolbox.svg').default,
+        img: require('../../../assets/images/icons/toolbox.svg').default,
         name: 'Dixons',
         email: 'meguc@ruj.io',
         icon: <Monitor size={18} />,
@@ -16,7 +16,7 @@ const CompanyTable = () => {
         sales: '68'
       },
       {
-        img: require('@src/assets/images/icons/parachute.svg').default,
+        img: require('../../../assets/images/icons/parachute.svg').default,
         name: 'Motels',
         email: 'vecav@hodzi.co.uk',
         icon: <Coffee size={18} />,
@@ -28,7 +28,7 @@ const CompanyTable = () => {
         salesUp: true
       },
       {
-        img: require('@src/assets/images/icons/brush.svg').default,
+        img: require('../../../assets/images/icons/brush.svg').default,
         name: 'Zipcar',
         email: 'davcilse@is.gov',
         icon: <Watch size={18} />,
@@ -40,7 +40,7 @@ const CompanyTable = () => {
         salesUp: true
       },
       {
-        img: require('@src/assets/images/icons/star.svg').default,
+        img: require('../../../assets/images/icons/star.svg').default,
         name: 'Owning',
         email: 'us@cuhil.gov',
         icon: <Monitor size={18} />,
@@ -52,7 +52,7 @@ const CompanyTable = () => {
         salesUp: true
       },
       {
-        img: require('@src/assets/images/icons/book.svg').default,
+        img: require('../../../assets/images/icons/book.svg').default,
         name: 'Cafés',
         email: 'pudais@jife.com',
         icon: <Coffee size={18} />,
@@ -63,7 +63,7 @@ const CompanyTable = () => {
         sales: '16'
       },
       {
-        img: require('@src/assets/images/icons/rocket.svg').default,
+        img: require('../../../assets/images/icons/rocket.svg').default,
         name: 'Kmart',
         email: 'bipri@cawiw.com',
         icon: <Watch size={18} />,
@@ -75,7 +75,7 @@ const CompanyTable = () => {
         salesUp: true
       },
       {
-        img: require('@src/assets/images/icons/speaker.svg').default,
+        img: require('../../../assets/images/icons/speaker.svg').default,
         name: 'Payers',
         email: 'luk@izug.io',
         icon: <Watch size={18} />,
@@ -107,7 +107,7 @@ const CompanyTable = () => {
             <div className='d-flex align-items-center'>
               <div className='avatar rounded'>
                 <div className='avatar-content'>
-                  <img src={col.img} alt={col.name} />
+                  <img../../..={col.img} alt={col.name} />
                 </div>
               </div>
               <div>

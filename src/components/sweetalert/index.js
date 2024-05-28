@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import WarningCircle from "@src/assets/images/icons/WarningCircle.png"
+import WarningCircle from "../../assets/images/icons/WarningCircle.png"
 
 const MySwal = withReactContent(Swal)
 

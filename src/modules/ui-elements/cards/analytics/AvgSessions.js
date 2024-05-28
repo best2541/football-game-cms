@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { kFormatter } from '@utils'
+import { kFormatter } from '../../../../utility/Utils'
 import {
   Card,
   CardBody,

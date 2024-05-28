@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import classnames from 'classnames'
 import { useSelector, useDispatch } from "react-redux"
-import Avatar from '@components/avatar'
+import Avatar from '../../../../components/avatar'
 import { AlertTriangle, Send, XCircle, Radio } from "react-feather"
 import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Media } from 'reactstrap'
 

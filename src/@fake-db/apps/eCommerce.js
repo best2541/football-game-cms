@@ -15,7 +15,7 @@ const data = {
         'After thousands of samples of palm data, we designed this ergonomic mouse. The laptop mouse has a streamlined arc and thumb rest to help reduce the stress caused by prolonged use of the laptop mouse.',
       brand: 'VicTsing',
       price: 10.99,
-      image: require('@src/assets/images/pages/eCommerce/27.png').default,
+      image: require('../../../src/assets/images/pages/eCommerce/27.png').default,
       hasFreeShipping: true,
       rating: 2
     },
@@ -27,7 +27,7 @@ const data = {
         'Redesigned for luxury — Thoughtfully refined and strikingly elegant, the latest Bose sunglasses blend enhanced features and designs for an elevated way to listen',
       brand: 'Bose',
       price: 249.0,
-      image: require('@src/assets/images/pages/eCommerce/26.png').default,
+      image: require('../../assets/images/pages/eCommerce/26.png').default,
       hasFreeShipping: false,
       rating: 5
     },
@@ -39,7 +39,7 @@ const data = {
         'Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.',
       brand: 'Willful',
       price: 29.99,
-      image: require('@src/assets/images/pages/eCommerce/25.png').default,
+      image: require('../../assets/images/pages/eCommerce/25.png').default,
       hasFreeShipping: false,
       rating: 5
     },
@@ -51,7 +51,7 @@ const data = {
         'Made of high quality water-resistant material; padded and adjustable shoulder straps; external USB with built-in charging cable offers a convenient charging',
       brand: 'Ronyes',
       price: 23.99,
-      image: require('@src/assets/images/pages/eCommerce/24.png').default,
+      image: require('../../assets/images/pages/eCommerce/24.png').default,
       hasFreeShipping: false,
       rating: 2
     },
@@ -62,7 +62,7 @@ const data = {
       description: 'Up to 3TB of storage capacity to store your growing files and content',
       brand: 'Toshiba',
       price: 69.99,
-      image: require('@src/assets/images/pages/eCommerce/23.png').default,
+      image: require('../../assets/images/pages/eCommerce/23.png').default,
       hasFreeShipping: false,
       rating: 2
     },
@@ -74,7 +74,7 @@ const data = {
         'FIND KEYS, BAGS & MORE -- Pro is our high-performance finder ideal for keys, backpacks, luggage or any other items you want to keep track of. The easy-to-use finder and free app work with iOS and Android.',
       brand: 'Tile',
       price: 29.99,
-      image: require('@src/assets/images/pages/eCommerce/22.png').default,
+      image: require('../../assets/images/pages/eCommerce/22.png').default,
       hasFreeShipping: false,
       rating: 4
     },
@@ -86,7 +86,7 @@ const data = {
         'Bluetooth Speakers-The M90 Bluetooth speaker uses the latest Bluetooth 5.0 technology and the latest Bluetooth ATS chip, Connecting over Bluetooth in seconds to iPhone, iPad, Smart-phones, Tablets, Windows, and other Bluetooth devices.',
       brand: 'Bugani',
       price: 56.0,
-      image: require('@src/assets/images/pages/eCommerce/21.png').default,
+      image: require('../../assets/images/pages/eCommerce/21.png').default,
       hasFreeShipping: false,
       rating: 3
     },
@@ -98,7 +98,7 @@ const data = {
         'All the greatest, games, TV, music and more. Connect with your friends to broadcast and celebrate your epic moments at the press of the Share button to Twitch, YouTube, Facebook and Twitter.',
       brand: 'Sony',
       price: 339.95,
-      image: require('@src/assets/images/pages/eCommerce/20.png').default,
+      image: require('../../assets/images/pages/eCommerce/20.png').default,
       hasFreeShipping: false,
       rating: 1
     },
@@ -110,7 +110,7 @@ const data = {
         'With unique inspirational quote and time markers on it,this water bottle is great for measuring your daily intake of water,reminding you stay hydrated and drink enough water throughout the day.A must have for any fitness goals including weight loss,appetite control and overall health.',
       brand: '3M',
       price: 16.99,
-      image: require('@src/assets/images/pages/eCommerce/19.png').default,
+      image: require('../../assets/images/pages/eCommerce/19.png').default,
       hasFreeShipping: false,
       rating: 5
     },
@@ -122,7 +122,7 @@ const data = {
         'All-in-one VR: No PC. No wires. No limits. Oculus quest is an all-in-one gaming system built for virtual reality. Now you can play almost anywhere with just a VR headset and controllers. Oculus touch controllers: arm yourself with the award-winning Oculus touch controllers. Your slashes, throws and grab appear in VR with intuitive, realistic Precision, transporting your hands and gestures right into the game',
       brand: 'Oculus',
       price: 645.0,
-      image: require('@src/assets/images/pages/eCommerce/18.png').default,
+      image: require('../../assets/images/pages/eCommerce/18.png').default,
       hasFreeShipping: false,
       rating: 1
     },
@@ -134,7 +134,7 @@ const data = {
         'Classic Hobo Purse: Top zipper closure, with 2 side zipper pockets design and elegant tassels decoration, fashionable and practical handbags for women, perfect for shopping, dating, travel and business',
       brand: 'Hobo',
       price: 39.99,
-      image: require('@src/assets/images/pages/eCommerce/17.png').default,
+      image: require('../../assets/images/pages/eCommerce/17.png').default,
       hasFreeShipping: false,
       rating: 3
     },
@@ -146,7 +146,7 @@ const data = {
         'Comfort + performance.  Designed with materials that are durable, lightweight and extremely comfortable. Core performance delivers the perfect mix of fit, style and all-around performance.',
       brand: 'Adidas',
       price: 54.59,
-      image: require('@src/assets/images/pages/eCommerce/16.png').default,
+      image: require('../../assets/images/pages/eCommerce/16.png').default,
       hasFreeShipping: false,
       rating: 5
     },
@@ -158,7 +158,7 @@ const data = {
         'TSA FRIENDLY- A separate DIGI SMART compartment can hold 15.6 inch Laptop as well as 15 inch, 14 inch Macbook, 12.9 inch iPad, and tech accessories like charger for quick TSA checkpoint when traveling',
       brand: 'TAS',
       price: 29.99,
-      image: require('@src/assets/images/pages/eCommerce/15.png').default,
+      image: require('../../assets/images/pages/eCommerce/15.png').default,
       hasFreeShipping: false,
       rating: 5
     },
@@ -170,7 +170,7 @@ const data = {
         'Charge with case: transmits charging power directly through protective cases. Rubber/plastic/TPU cases under 5 mm thickness . Do not use any magnetic and metal attachments or cards, or it will prevent charging.',
       brand: '3M',
       price: 10.83,
-      image: require('@src/assets/images/pages/eCommerce/14.png').default,
+      image: require('../../assets/images/pages/eCommerce/14.png').default,
       hasFreeShipping: false,
       rating: 3
     },
@@ -182,7 +182,7 @@ const data = {
         'SUPERIOR VIEWING EXPERIENCE: Supporting 1920x1080 resolution, VANKYO Leisure 3 projector is powered by MStar Advanced Color Engine, which is ideal for home entertainment. 2020 upgraded LED lighting provides a superior viewing experience for you.',
       brand: 'Vankyo Store',
       price: 99.99,
-      image: require('@src/assets/images/pages/eCommerce/13.png').default,
+      image: require('../../assets/images/pages/eCommerce/13.png').default,
       hasFreeShipping: false,
       rating: 2
     },
@@ -194,7 +194,7 @@ const data = {
         'Up to 10 hours of surﬁng the web on Wi‑Fi, watching video, or listening to music. Up to 9 hours of surﬁng the web using cellular data network, Compatible with Smart Keyboard Folio and Bluetooth keyboards',
       brand: 'Apple',
       price: 799.99,
-      image: require('@src/assets/images/pages/eCommerce/12.png').default,
+      image: require('../../assets/images/pages/eCommerce/12.png').default,
       hasFreeShipping: false,
       rating: 3
     },
@@ -206,7 +206,7 @@ const data = {
         'With a bold application of colorblocking inspired by modern art styles, the Nike Air Max 270 React sneaker is constructed with layers of lightweight material to achieve its artful look and comfortable feel.',
       brand: 'Nike',
       price: 98.95,
-      image: require('@src/assets/images/pages/eCommerce/11.png').default,
+      image: require('../../assets/images/pages/eCommerce/11.png').default,
       hasFreeShipping: false,
       rating: 1
     },
@@ -218,7 +218,7 @@ const data = {
         'Logitech K380 Bluetooth Wireless Keyboard gives you the comfort and convenience of desktop typing on your smartphone, and tablet. It is a wireless keyboard that connects to all Bluetooth wireless devices that support external keyboards. Take this compact, lightweight, Bluetooth keyboard anywhere in your home. Type wherever you like, on any compatible computer, phone or tablet.',
       brand: 'Logitech',
       price: 81.99,
-      image: require('@src/assets/images/pages/eCommerce/10.png').default,
+      image: require('../../assets/images/pages/eCommerce/10.png').default,
       hasFreeShipping: false,
       rating: 4
     },
@@ -228,7 +228,7 @@ const data = {
       slug: 'one-plus-7-pro-19',
       brand: 'Philips',
       price: 14.99,
-      image: require('@src/assets/images/pages/eCommerce/9.png').default,
+      image: require('../../assets/images/pages/eCommerce/9.png').default,
       hasFreeShipping: false,
       rating: 4,
       description: `The OnePlus 7 Pro features a brand new design, with a glass back and front and curved sides. The phone feels
@@ -243,7 +243,7 @@ const data = {
       slug: 'sony-4-k-ultra-hd-led-tv-20',
       brand: 'Apple',
       price: 7999.99,
-      image: require('@src/assets/images/pages/eCommerce/8.png').default,
+      image: require('../../assets/images/pages/eCommerce/8.png').default,
       hasFreeShipping: false,
       rating: 5,
       description: `Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality
@@ -256,7 +256,7 @@ const data = {
       slug: 'google-google-home-white-slate-fabric-21',
       brand: 'Google',
       price: 129.29,
-      image: require('@src/assets/images/pages/eCommerce/7.png').default,
+      image: require('../../assets/images/pages/eCommerce/7.png').default,
       hasFreeShipping: true,
       rating: 4,
       description: `Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use
@@ -269,7 +269,7 @@ const data = {
       slug: 'switch-pro-controller-22',
       brand: 'Sharp',
       price: 429.99,
-      image: require('@src/assets/images/pages/eCommerce/6.png').default,
+      image: require('../../assets/images/pages/eCommerce/6.png').default,
       hasFreeShipping: false,
       rating: 3,
       description: `The Nintendo Switch Pro Controller is one of the priciest "baseline" controllers in the current console
@@ -283,7 +283,7 @@ const data = {
       slug: 'apple-mac-book-air-latest-model-13-3-display-silver-23',
       brand: 'Apple',
       price: 999.99,
-      image: require('@src/assets/images/pages/eCommerce/5.png').default,
+      image: require('../../assets/images/pages/eCommerce/5.png').default,
       hasFreeShipping: false,
       rating: 4,
       description: `MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a
@@ -297,7 +297,7 @@ const data = {
       slug: 'one-odio-a71-wired-headphones-24',
       brand: 'OneOdio',
       price: 49.99,
-      image: require('@src/assets/images/pages/eCommerce/4.png').default,
+      image: require('../../assets/images/pages/eCommerce/4.png').default,
       hasFreeShipping: true,
       rating: 3,
       description: `Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,
@@ -311,7 +311,7 @@ const data = {
       slug: 'apple-i-mac-27-inch-25',
       brand: 'Apple',
       price: 999.99,
-      image: require('@src/assets/images/pages/eCommerce/3.png').default,
+      image: require('../../assets/images/pages/eCommerce/3.png').default,
       hasFreeShipping: true,
       rating: 4,
       description: `The all-in-one for all. If you can dream it, you can do it on iMac. It’s beautifully & incredibly intuitive and
@@ -326,7 +326,7 @@ const data = {
       slug: 'apple-i-phone-11-64-gb-black-26',
       brand: 'Apple',
       price: 669.99,
-      image: require('@src/assets/images/pages/eCommerce/2.png').default,
+      image: require('../../assets/images/pages/eCommerce/2.png').default,
       hasFreeShipping: true,
       rating: 5,
       description: `The Apple iPhone 11 is a great smartphone, which was loaded with a lot of quality features. It comes with a
@@ -340,7 +340,7 @@ const data = {
       slug: 'apple-watch-series-5-27',
       brand: 'Apple',
       price: 339.99,
-      image: require('@src/assets/images/pages/eCommerce/1.png').default,
+      image: require('../../assets/images/pages/eCommerce/1.png').default,
       hasFreeShipping: true,
       rating: 4,
       description: `On Retina display that never sleeps, so it’s easy to see the time and other important information, without

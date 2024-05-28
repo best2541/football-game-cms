@@ -4,7 +4,7 @@ import { Badge, Col, Row } from "reactstrap"
 import ReactPaginate from "react-paginate"
 import DataTable from "react-data-table-component"
 import "./css/table-sender.css"
-import "@src/assets/scss/react/libs/tables/react-dataTable-custom-sender-component.scss"
+import "../../../../assets/scss/react/libs/tables/react-dataTable-custom-sender-component.scss"
 import { Link, useHistory } from "react-router-dom"
 import moment from "moment"
 

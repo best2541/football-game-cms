@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react"
 import { Row, Col, FormGroup, Input, Label, Button } from "reactstrap"
 import Flatpickr from "react-flatpickr"
 import "./css/filter-group-sender.css"
-import "@src/assets/scss/react/libs/flatpickr/flatpickr.scss"
+import "../../../../assets/scss/react/libs/flatpickr/flatpickr.scss"
 import SenderContext from "@modules/context/contextSender"
 
 const FilterGroupSender = () => {

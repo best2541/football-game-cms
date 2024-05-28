@@ -6,8 +6,8 @@ import { IntlProvider } from 'react-intl'
 import { useTranslation } from "react-i18next"
 
 // ** User Language Data
-import userMessagesTh from '@src/locales/th.json'
-import userMessagesEn from '@src/locales/en.json'
+import userMessagesTh from '../../locales/th.json'
+import userMessagesEn from '../../locales/en.json'
 
 // ** Menu msg obj
 const menuMessages = {

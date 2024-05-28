@@ -1,1 +1,1 @@
-import axiosInstance from "@src/helper/axios"
+import axiosInstance from "../../../helper/axios"

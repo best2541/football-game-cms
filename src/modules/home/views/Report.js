@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useState } from "react"
-import NavbarTitle from "@src/components/navbarTitle"
+import NavbarTitle from "../../../components/navbarTitle"
 import { useDispatch, useSelector } from "react-redux"
 import DataTable from "react-data-table-component"
-import { requestLoading } from "@src/redux/actions/main"
-import LoadingSpinner from "@src/components/spinner/LoadingSpinner"
+import { requestLoading } from "../../../redux/actions/main"
+import LoadingSpinner from "../../../components/spinner/LoadingSpinner"
 import GroupListFilter from "../components/GroupListFilter"
 import { Button, Card, CardBody } from "reactstrap"
-import PaginationAndRowPerPage from "@src/components/pagination/PaginationAndRowPerPage"
+import PaginationAndRowPerPage from "../../../components/pagination/PaginationAndRowPerPage"
 import { axiosInstance } from "../../../helper/api"
 import { Link } from 'react-router-dom'
 import LinearProgress from '@mui/material/LinearProgress'

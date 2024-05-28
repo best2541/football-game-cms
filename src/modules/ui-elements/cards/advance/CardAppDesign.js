@@ -1,11 +1,11 @@
 import classnames from 'classnames'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../../components/avatar'
 import { Card, CardTitle, CardBody, CardText, Badge, Button } from 'reactstrap'
 
 const CardAppDesign = () => {
   const avatarArr = [
     {
-      img: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+      img: require('../../../../assets/images/portrait/small/avatar-s-9.jpg').default,
       imgHeight: 34,
       imgWidth: 34
     },
@@ -14,12 +14,12 @@ const CardAppDesign = () => {
       color: 'light-danger'
     },
     {
-      img: require('@src/assets/images/portrait/small/avatar-s-14.jpg').default,
+      img: require('../../../../assets/images/portrait/small/avatar-s-14.jpg').default,
       imgHeight: 34,
       imgWidth: 34
     },
     {
-      img: require('@src/assets/images/portrait/small/avatar-s-7.jpg').default,
+      img: require('../../../../assets/images/portrait/small/avatar-s-7.jpg').default,
       imgHeight: 34,
       imgWidth: 34
     },

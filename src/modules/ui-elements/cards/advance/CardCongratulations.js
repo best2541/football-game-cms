@@ -1,8 +1,8 @@
 import { Award } from 'react-feather'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../../components/avatar'
 import { Card, CardBody, CardText } from 'reactstrap'
-import decorationLeft from '@src/assets/images/elements/decore-left.png'
-import decorationRight from '@src/assets/images/elements/decore-right.png'
+import decorationLeft from '../../../../assets/images/elements/decore-left.png'
+import decorationRight from '../../../../assets/images/elements/decore-right.png'
 
 const CardCongratulations = () => {
   return (

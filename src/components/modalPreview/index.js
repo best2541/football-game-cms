@@ -11,7 +11,7 @@ const ModalPreview = (props) => {
           <img
             className="img-fluid img-reward"
             style={{ maxWidth: "80%", maxHeight: "80%" }}
-            src={require('@src/assets/images/pages/coupon.png').default}
+            src={require('../../../src/assets/images/pages/coupon.png').default}
           />
           <div
             className="text-title-thai text-center mt-1"

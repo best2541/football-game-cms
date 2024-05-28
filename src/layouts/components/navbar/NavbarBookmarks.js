@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // ** Third Party Components
 import * as Icon from 'react-feather'
 import classnames from 'classnames'
-import Autocomplete from '@components/autocomplete'
+import Autocomplete from '../../../components/autocomplete'
 import {
   NavItem,
   NavLink,
@@ -18,12 +18,11 @@ import {
 
 // ** Store & Actions
 import { useDispatch, useSelector } from 'react-redux'
-import { getBookmarks, updateBookmarked, handleSearchQuery } from '@store/actions/navbar'
-import themeConfig from '@configs/themeConfig'
+import { getBookmarks, updateBookmarked, handleSearchQuery } from '../../../redux/actions/navbar'
+import themeConfig from '../../../configs/themeConfig'
 
-  // ** styles
-import '@src/assets/scss/base/core/menu/menu-types/vertical-menu.scss'
-
+// ** styles
+import '../../../assets/scss/base/core/menu/menu-types/vertical-menu.scss'
 const NavbarBookmarks = props => {
   // ** Props
   const { setMenuVisibility } = props
@@ -146,7 +145,7 @@ const NavbarBookmarks = props => {
           <NavLink className='nav-menu-main menu-toggle hidden-xs is-active' onClick={() => setMenuVisibility(true)}>
             <Icon.Menu className='ficon' />
           </NavLink>
-          <img className='brand-logo logo-header-bar' src={themeConfig.app.appLogoImage} alt='logo'/>
+          <img className='brand-logo logo-header-bar' src={themeConfig.app.appLogoImage} alt='logo' />
         </NavItem>
       </ul>
       <ul className='nav navbar-nav bookmark-icons'>

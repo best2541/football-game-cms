@@ -7,8 +7,7 @@ import {DragDrop} from '@uppy/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTrash} from '@fortawesome/free-solid-svg-icons'
 import {Button} from 'reactstrap'
-import '@src/assets/scss/react/libs/file-uploader/file-uploader.scss'
-
+import '../../assets/scss/react/libs/file-uploader/file-uploader.scss'
 import 'uppy/dist/uppy.css'
 import '@uppy/status-bar/dist/style.css'
 

@@ -8,7 +8,7 @@ const data = {
       from: {
         email: 'tommys@mail.com',
         name: 'Tommy Sicilia',
-        avatar: require('@src/assets/images/avatars/1.png').default
+        avatar: require('../../../src/assets/images/avatars/1.png').default
       },
       to: [
         {
@@ -24,13 +24,13 @@ const data = {
       attachments: [
         {
           fileName: 'log.txt',
-          thumbnail: require('@src/assets/images/icons/txt.png').default,
+          thumbnail: require('../../../src/assets/images/icons/txt.png').default,
           url: '',
           size: '5mb'
         },
         {
           fileName: 'performance.xls',
-          thumbnail: require('@src/assets/images/icons/xls.png').default,
+          thumbnail: require('../../../src/assets/images/icons/xls.png').default,
           url: '',
           size: '10mb'
         }
@@ -47,7 +47,7 @@ const data = {
       from: {
         email: 'tressag@mail.com',
         name: 'Tressa Gass',
-        avatar: require('@src/assets/images/avatars/2.png').default
+        avatar: require('../../../src/assets/images/avatars/2.png').default
       },
       to: [
         {
@@ -73,7 +73,7 @@ const data = {
       from: {
         email: 'hettiem@mail.com',
         name: 'Hettie Mcerlean',
-        avatar: require('@src/assets/images/avatars/3.png').default
+        avatar: require('../../../src/assets/images/avatars/3.png').default
       },
       to: [
         {
@@ -103,7 +103,7 @@ const data = {
       from: {
         email: 'louettae@mail.com',
         name: 'Louetta Esses',
-        avatar: require('@src/assets/images/avatars/4.png').default
+        avatar: require('../../../src/assets/images/avatars/4.png').default
       },
       to: [
         {
@@ -119,7 +119,7 @@ const data = {
       attachments: [
         {
           fileName: 'report.doc',
-          thumbnail: require('@src/assets/images/icons/doc.png').default,
+          thumbnail: require('../../../src/assets/images/icons/doc.png').default,
           url: '',
           size: '32mb'
         }
@@ -136,7 +136,7 @@ const data = {
       from: {
         email: 'bposvner0@zdnet.com',
         name: 'Bobbie Posvner',
-        avatar: require('@src/assets/images/avatars/11.png').default
+        avatar: require('../../../src/assets/images/avatars/11.png').default
       },
       to: [
         {
@@ -162,7 +162,7 @@ const data = {
       from: {
         email: 'rgilder1@illinois.edu',
         name: 'Rebecca Gilder',
-        avatar: require('@src/assets/images/avatars/6.png').default
+        avatar: require('../../../src/assets/images/avatars/6.png').default
       },
       to: [
         {
@@ -188,7 +188,7 @@ const data = {
       from: {
         email: 'swilby2@yandex.ru',
         name: 'Shawn Wilby',
-        avatar: require('@src/assets/images/avatars/1.png').default
+        avatar: require('../../../src/assets/images/avatars/1.png').default
       },
       to: [
         {
@@ -214,7 +214,7 @@ const data = {
       from: {
         email: 'wmannering3@mozilla.org',
         name: 'Waldemar Mannering',
-        avatar: require('@src/assets/images/avatars/11.png').default
+        avatar: require('../../../src/assets/images/avatars/11.png').default
       },
       to: [
         {
@@ -240,7 +240,7 @@ const data = {
       from: {
         email: 'hfrostdyke4@scientificamerican.com',
         name: 'Heath Frostdyke',
-        avatar: require('@src/assets/images/avatars/9.png').default
+        avatar: require('../../../src/assets/images/avatars/9.png').default
       },
       to: [
         {
@@ -266,7 +266,7 @@ const data = {
       from: {
         email: 'pjentzsch5@tamu.edu',
         name: 'Paulita Jentzsch',
-        avatar: require('@src/assets/images/avatars/7.png').default
+        avatar: require('../../../src/assets/images/avatars/7.png').default
       },
       to: [
         {
@@ -282,7 +282,7 @@ const data = {
       attachments: [
         {
           fileName: 'UtNulla.xls',
-          thumbnail: require('@src/assets/images/icons/xls.png').default,
+          thumbnail: require('../../../src/assets/images/icons/xls.png').default,
           url: '',
           size: '1mb'
         }
@@ -299,7 +299,7 @@ const data = {
       from: {
         email: 'lminghetti6@yale.edu',
         name: 'Lowell Minghetti',
-        avatar: require('@src/assets/images/avatars/4.png').default
+        avatar: require('../../../src/assets/images/avatars/4.png').default
       },
       to: [
         {
@@ -315,7 +315,7 @@ const data = {
       attachments: [
         {
           fileName: 'ElementumLigula.js',
-          thumbnail: require('@src/assets/images/icons/js.png').default,
+          thumbnail: require('../../../src/assets/images/icons/js.png').default,
           url: '',
           size: '29mb'
         }
@@ -332,7 +332,7 @@ const data = {
       from: {
         email: 'efinessy7@sbwire.com',
         name: 'Eugenie Finessy',
-        avatar: require('@src/assets/images/avatars/2.png').default
+        avatar: require('../../../src/assets/images/avatars/2.png').default
       },
       to: [
         {
@@ -358,7 +358,7 @@ const data = {
       from: {
         email: 'tmckeurton8@163.com',
         name: 'Tadio McKeurton',
-        avatar: require('@src/assets/images/avatars/10.png').default
+        avatar: require('../../../src/assets/images/avatars/10.png').default
       },
       to: [
         {
@@ -384,7 +384,7 @@ const data = {
       from: {
         email: 'ebegg9@wikia.com',
         name: 'Eb Begg',
-        avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default
+        avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default
       },
       to: [
         {
@@ -410,7 +410,7 @@ const data = {
       from: {
         email: 'mspata@sina.com.cn',
         name: 'Modestine Spat',
-        avatar: require('@src/assets/images/avatars/9.png').default
+        avatar: require('../../../src/assets/images/avatars/9.png').default
       },
       to: [
         {
@@ -436,7 +436,7 @@ const data = {
       from: {
         email: 'cprandob@rambler.ru',
         name: 'Chase Prando',
-        avatar: require('@src/assets/images/avatars/2.png').default
+        avatar: require('../../../src/assets/images/avatars/2.png').default
       },
       to: [
         {
@@ -462,7 +462,7 @@ const data = {
       from: {
         email: 'nbartlesc@merriam-webster.com',
         name: 'Normand Bartles',
-        avatar: require('@src/assets/images/avatars/9.png').default
+        avatar: require('../../../src/assets/images/avatars/9.png').default
       },
       to: [
         {
@@ -488,7 +488,7 @@ const data = {
       from: {
         email: 'rgennd@dedecms.com',
         name: 'Robin Genn',
-        avatar: require('@src/assets/images/avatars/6.png').default
+        avatar: require('../../../src/assets/images/avatars/6.png').default
       },
       to: [
         {
@@ -514,7 +514,7 @@ const data = {
       from: {
         email: 'eramelote@webeden.co.uk',
         name: 'Emmalynn Ramelot',
-        avatar: require('@src/assets/images/avatars/8.png').default
+        avatar: require('../../../src/assets/images/avatars/8.png').default
       },
       to: [
         {
@@ -540,7 +540,7 @@ const data = {
       from: {
         email: 'pcuzenf@mediafire.com',
         name: 'Penni Cuzen',
-        avatar: require('@src/assets/images/avatars/9.png').default
+        avatar: require('../../../src/assets/images/avatars/9.png').default
       },
       to: [
         {
@@ -556,7 +556,7 @@ const data = {
       attachments: [
         {
           fileName: 'Augue.js',
-          thumbnail: require('@src/assets/images/icons/js.png').default,
+          thumbnail: require('../../../src/assets/images/icons/js.png').default,
           url: '',
           size: '4mb'
         }
@@ -573,7 +573,7 @@ const data = {
       from: {
         email: 'abaldersong@utexas.edu',
         name: 'Ardis Balderson',
-        avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default
+        avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default
       },
       to: [
         {
@@ -599,7 +599,7 @@ const data = {
       from: {
         email: 'dmallallh@ask.com',
         name: 'Dagmar Mallall',
-        avatar: require('@src/assets/images/avatars/8.png').default
+        avatar: require('../../../src/assets/images/avatars/8.png').default
       },
       to: [
         {
@@ -625,7 +625,7 @@ const data = {
       from: {
         email: 'nmacgaughyi@aol.com',
         name: 'Nada MacGaughy',
-        avatar: require('@src/assets/images/avatars/3.png').default
+        avatar: require('../../../src/assets/images/avatars/3.png').default
       },
       to: [
         {
@@ -641,7 +641,7 @@ const data = {
       attachments: [
         {
           fileName: 'Leo.xls',
-          thumbnail: require('@src/assets/images/icons/xls.png').default,
+          thumbnail: require('../../../src/assets/images/icons/xls.png').default,
           url: '',
           size: '33mb'
         }
@@ -658,7 +658,7 @@ const data = {
       from: {
         email: 'douldcottj@yellowpages.com',
         name: 'Dalila Ouldcott',
-        avatar: require('@src/assets/images/avatars/1.png').default
+        avatar: require('../../../src/assets/images/avatars/1.png').default
       },
       to: [
         {
@@ -674,7 +674,7 @@ const data = {
       attachments: [
         {
           fileName: 'example.doc',
-          thumbnail: require('@src/assets/images/icons/doc.png').default,
+          thumbnail: require('../../../src/assets/images/icons/doc.png').default,
           url: '',
           size: '21mb'
         }
@@ -688,7 +688,7 @@ const data = {
           from: {
             email: 'johndoe@mail.com',
             name: 'John Doe',
-            avatar: require('@src/assets/images/avatars/11.png').default
+            avatar: require('../../../src/assets/images/avatars/11.png').default
           },
           to: [
             {
@@ -714,7 +714,7 @@ const data = {
           from: {
             email: 'hettiem@mail.com',
             name: 'Hettie Mcerlean',
-            avatar: require('@src/assets/images/avatars/3.png').default
+            avatar: require('../../../src/assets/images/avatars/3.png').default
           },
           to: [
             {

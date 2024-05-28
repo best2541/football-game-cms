@@ -4,7 +4,7 @@ import { Fragment, useState, useEffect } from 'react'
 // ** Third Party Components
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import UiLoader from '@src/components/ui-loader'
+import UiLoader from '../../../src/components/ui-loader'
 import { ChevronDown, RotateCw, X } from 'react-feather'
 import { Card, CardHeader, CardTitle, Collapse, Spinner } from 'reactstrap'
 

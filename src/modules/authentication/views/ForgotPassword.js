@@ -1,13 +1,13 @@
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import { isUserLoggedIn } from '@utils'
-import { useSkin } from '@hooks/useSkin'
+import { isUserLoggedIn } from '../../../utility/Utils'
+import { useSkin } from '../../../utility/hooks/useSkin'
 import { ChevronLeft } from 'react-feather'
 import { Link, Redirect, useHistory } from 'react-router-dom'
 import { Row, Col, CardTitle, CardText, Form, FormGroup, Label, Input, Button } from 'reactstrap'
-import '@src/assets/scss/base/pages/page-auth.scss'
-import background from "@src/assets/images/img/background-image-britz.png"
-import icon from "@src/assets/images/img/icon-britz.png"
+import '../../../assets/scss/base/pages/page-auth.scss'
+import background from "../../../assets/images/img/background-image-britz.png"
+import icon from "../../../assets/images/img/icon-britz.png"
 
 const ForgotPassword = () => {
   const history = useHistory()
@@ -26,7 +26,7 @@ const ForgotPassword = () => {
   }
 
   const illustration = skin === 'dark' ? 'forgot-password-v2-dark.svg' : 'forgot-password-v2.svg',
-    source = require(`@src/assets/images/pages/${illustration}`).default
+    source = require(`../../../assets/images/pages/${illustration}`).default
 
   if (!isUserLoggedIn()) {
     return (

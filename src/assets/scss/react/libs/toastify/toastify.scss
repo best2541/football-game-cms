@@ -1,8 +1,8 @@
 @import '~react-toastify/dist/ReactToastify.css';
 @import '../../../base/bootstrap-extended/include';
 @import '../../../base/components/include';
-@import '@src/assets/scss/base/core/colors/palette-variables';
-
+// @import '@src/assets/scss/base/core/colors/palette-variables';
+@import '../../../base/core/colors/palette-variables.scss';
 .Toastify__toast {
   background-color: $white;
   border-radius: $toast-border-radius;

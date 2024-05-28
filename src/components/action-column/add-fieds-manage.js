@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react"
 import { Input, Form, FormGroup, Label, Row, Col, Button } from "reactstrap"
-import { selectThemeColors } from "@utils"
+import { selectThemeColors } from "../../utility/Utils"
 import "./css/index.css"
 import Select, { components } from "react-select"
 

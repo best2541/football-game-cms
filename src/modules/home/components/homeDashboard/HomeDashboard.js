@@ -2,8 +2,8 @@ import { Fragment, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { Bar } from 'react-chartjs-2'
 import { Card, CardHeader, CardTitle, CardBody } from 'reactstrap'
-import { requestLoading } from "@src/redux/actions/main"
-import LoadingSpinner from "@src/components/spinner/LoadingSpinner"
+import { requestLoading } from "../../../../redux/actions/main"
+import LoadingSpinner from "../../../../components/spinner"
 
 const HomeDashboard = ({ tooltipShadow, gridLineColor, labelColor, successColorShade }) => {
   const { data, loading } = useSelector((state) => state.homeDashboard)
@@ -80,7 +80,7 @@ const HomeDashboard = ({ tooltipShadow, gridLineColor, labelColor, successColorS
         <CardBody>
           <div style={{ height: '400px' }}>
             {data !== undefined ? <Bar data={data} options={options} height={400} /> : null}
-            
+
           </div>
         </CardBody>
       </Card>

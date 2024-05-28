@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Users } from 'react-feather'
-import StatsWithAreaChart from '@src/components/widgets/stats/StatsWithAreaChart'
+import StatsWithAreaChart from '../../../../components/widgets/stats/StatsWithAreaChart'
 
 const SubscribersGained = ({ kFormatter }) => {
   const [data, setData] = useState(null)

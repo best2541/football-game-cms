@@ -1,10 +1,9 @@
 import { Fragment } from 'react'
 import { Row, Col } from 'reactstrap'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../../components/breadcrumbs'
 import DefaultColors from './DefaultColors'
 import GradientColors from './GradientColors'
-
-import '@src/assets/scss/base/pages/ui-colors.scss'
+import '../../../..src/assets/scss/base/pages/ui-colors.scss'
 
 const Colors = () => {
   return (

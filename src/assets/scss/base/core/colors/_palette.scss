@@ -57,7 +57,7 @@
       // Alert
       @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
         .alert-#{$color_name} {
-          background: rgba($color_value, 0.12) !important;
+          // background: rgba($color_value, 0.12) !important;
           color: $color_value !important;
 
           .alert-heading {
@@ -65,7 +65,7 @@
           }
 
           .alert-link {
-            color: darken($color_value, 5%) !important;
+            // color: darken($color_value, 5%) !important;
           }
 
           // closable alert
@@ -78,7 +78,7 @@
       // bg color lighten for rgba - opacity set
       @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white' and $color_name != 'dark') {
         .bg-light-#{$color_name} {
-          background: rgba($color_value, 0.12) !important;
+          // background: rgba($color_value, 0.12) !important;
           color: $color_value !important;
 
           // Calendar background, color and border color
@@ -146,7 +146,7 @@
         .badge {
           // Badge Light Background
           &.badge-light-#{$color_name} {
-            background-color: rgba($color: $color_value, $alpha: 0.12);
+            // background-color: rgba($color: $color_value, $alpha: 0.12);
             color: $color_value !important;
           }
         }
@@ -172,7 +172,7 @@
           }
 
           &:hover:not(.disabled):not(:disabled) {
-            box-shadow: 0 8px 25px -8px rgba($color-value, 1);
+            // box-shadow: 0 8px 25px -8px rgba($color-value, 1);
           }
 
           &:not(:disabled):not(.disabled):active:focus {
@@ -192,13 +192,13 @@
           }
 
           &:hover:not(.disabled):not(:disabled) {
-            background-color: rgba($color-value, 0.12);
+            // background-color: rgba($color-value, 0.12);
           }
 
           &:active,
           &.active,
           &:focus {
-            background-color: rgba($color: $color_value, $alpha: 0.2);
+            // background-color: rgba($color: $color_value, $alpha: 0.2);
             color: $color_value;
           }
 
@@ -250,7 +250,7 @@
           color: $color_value;
 
           &:hover:not(.disabled):not(:disabled) {
-            background-color: rgba($color: $color_value, $alpha: 0.04);
+            // background-color: rgba($color: $color_value, $alpha: 0.04);
             color: $color_value;
           }
           &:not(:disabled):not(.disabled):active:focus {
@@ -259,7 +259,7 @@
           &:not(:disabled):not(.disabled):active,
           &:not(:disabled):not(.disabled).active,
           &:not(:disabled):not(.disabled):focus {
-            background-color: rgba($color: $color_value, $alpha: 0.2);
+            // background-color: rgba($color: $color_value, $alpha: 0.2);
             color: $color_value;
           }
 
@@ -268,29 +268,29 @@
           }
           // split toggle have show class
           .show > &.dropdown-toggle {
-            background-color: rgba($color: $color_value, $alpha: 0.2);
+            // background-color: rgba($color: $color_value, $alpha: 0.2);
             color: $color_value;
           }
         }
       }
 
       // Wave effect
-      @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
-        .btn-outline-#{$color_name},
-        .btn-flat-#{$color-name} {
-          &.waves-effect {
-            .waves-ripple {
-              background: radial-gradient(
-                rgba($color_value, 0.2) 0,
-                rgba($color_value, 0.3) 40%,
-                rgba($color_value, 0.4) 50%,
-                rgba($color_value, 0.5) 60%,
-                rgba($white, 0) 70%
-              );
-            }
-          }
-        }
-      }
+      // @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
+      //   .btn-outline-#{$color_name},
+      //   .btn-flat-#{$color-name} {
+      //     &.waves-effect {
+      //       .waves-ripple {
+      //         background: radial-gradient(
+      //           rgba($color_value, 0.2) 0,
+      //           rgba($color_value, 0.3) 40%,
+      //           rgba($color_value, 0.4) 50%,
+      //           rgba($color_value, 0.5) 60%,
+      //           rgba($white, 0) 70%
+      //         );
+      //       }
+      //     }
+      //   }
+      // }
 
       // Bullet colors for email app
       @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
@@ -398,7 +398,7 @@
       // Progress Bars
       @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
         .progress-bar-#{$color_name} {
-          background-color: rgba($color_value, 0.12);
+          // background-color: rgba($color_value, 0.12);
 
           .progress-bar {
             background-color: $color-value;
@@ -420,7 +420,7 @@
             &.timeline-point-indicator {
               background-color: $color_value !important;
               &:before {
-                background: rgba($color: $color_value, $alpha: 0.12) !important;
+                // background: rgba($color: $color_value, $alpha: 0.12) !important;
               }
             }
           }
@@ -460,11 +460,11 @@
             .custom-control-input:checked ~ .custom-control-label::before,
             .custom-control-input:active ~ .custom-control-label::before,
             .custom-control-input:focus ~ .custom-control-label::before {
-              box-shadow: 0 2px 4px 0 rgba($color_value, 0.4) !important;
+              // box-shadow: 0 2px 4px 0 rgba($color_value, 0.4) !important;
             }
           }
           .custom-control-input:disabled:checked ~ .custom-control-label::before {
-            background-color: rgba($color_value, 0.65) !important;
+            // background-color: rgba($color_value, 0.65) !important;
             border: none;
             box-shadow: none !important;
           }

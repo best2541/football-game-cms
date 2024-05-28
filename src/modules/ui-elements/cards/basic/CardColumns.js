@@ -1,7 +1,7 @@
 import { CardColumns, Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
-import img1 from '@src/assets/images/slider/06.jpg'
-import img2 from '@src/assets/images/slider/01.jpg'
-import img3 from '@src/assets/images/slider/02.jpg'
+import img1 from '../../../../assets/images/slider/06.jpg'
+import img2 from '../../../../assets/images/slider/01.jpg'
+import img3 from '../../../../assets/images/slider/02.jpg'
 const CardColumnsComponent = () => {
   return (
     <CardColumns>

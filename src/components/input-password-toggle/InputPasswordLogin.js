@@ -50,18 +50,18 @@ const InputPasswordLogin = props => {
           className={classnames({
             [inputClassName]: inputClassName
           })}
-          style={!inputVisibility ? {fontSize: "20px"} : {fontSize: "14px"}}
+          style={!inputVisibility ? { fontSize: "20px" } : { fontSize: "14px" }}
           /*eslint-disable */
           {...(label && htmlFor
             ? {
-                id: htmlFor
-              }
+              id: htmlFor
+            }
             : {})}
           {...rest}
-          /*eslint-enable */
+        /*eslint-enable */
         />
         <InputGroupAddon addonType='append' onClick={() => setInputVisibility(!inputVisibility)}>
-          <InputGroupText className='cursor-pointer'>{renderIcon()}</InputGroupText>
+          <InputGroupText className='cursor-pointer' style={{ height: '100%' }}>{renderIcon()}</InputGroupText>
         </InputGroupAddon>
       </InputGroup>
     </Fragment>

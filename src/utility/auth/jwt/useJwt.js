@@ -1,5 +1,5 @@
 // ** Core JWT Import
-import useJwt from '@src/helper/auth/jwt/useJwt'
+import useJwt from '../../../helper/auth/jwt/useJwt'
 
 const { jwt } = useJwt({})
 

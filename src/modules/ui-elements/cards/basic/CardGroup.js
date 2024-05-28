@@ -1,7 +1,7 @@
 import { CardGroup, Card, CardImg, CardBody, CardTitle, CardText, CardFooter } from 'reactstrap'
-import img1 from '@src/assets/images/slider/01.jpg'
-import img2 from '@src/assets/images/slider/05.jpg'
-import img3 from '@src/assets/images/slider/03.jpg'
+import img1 from '../../../../assets/images/slider/01.jpg'
+import img2 from '../../../../assets/images/slider/05.jpg'
+import img3 from '../../../../assets/images/slider/03.jpg'
 
 const CardGroupComponent = () => {
   return (

@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl'
 import VerticalNavMenuItems from './VerticalNavMenuItems'
 
 // ** Utils
-import { isNavGroupActive, getAllParents } from '@layouts/utils'
+import { isNavGroupActive, getAllParents } from '../../../../layouts/utils'
 
 const VerticalNavMenuGroup = ({
   item,

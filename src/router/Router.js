@@ -2,14 +2,14 @@
 import { Suspense, useContext, lazy } from 'react'
 
 // ** Utils
-import { isUserLoggedIn, getMenuStatus } from '@utils'
-import { useLayout } from '@hooks/useLayout'
-import { AbilityContext } from '@src/utility/context/Can'
-import { useRouterTransition } from '@hooks/useRouterTransition'
+import { isUserLoggedIn, getMenuStatus } from '../utility/Utils'
+import { useLayout } from '../utility/hooks/useLayout'
+import { AbilityContext } from '../utility/context/Can'
+import { useRouterTransition } from '../utility/hooks/useRouterTransition'
 
 // ** Custom Components
 // import Spinner from '@components/spinner/Loading-spinner' // Uncomment if your require content fallback
-import LayoutWrapper from '@layouts/components/layout-wrapper'
+import LayoutWrapper from '../layouts/components/layout-wrapper'
 
 // ** Router Components
 import { BrowserRouter as AppRouter, Route, Switch, Redirect } from 'react-router-dom'
@@ -18,8 +18,8 @@ import { BrowserRouter as AppRouter, Route, Switch, Redirect } from 'react-route
 import { DefaultRoute, Routes } from './routes'
 
 // ** Layouts
-import BlankLayout from '@layouts/BlankLayout'
-import VerticalLayout from '@src/layouts/VerticalLayout'
+import BlankLayout from '../layouts/BlankLayout'
+import VerticalLayout from '../layouts/VerticalLayout'
 
 const Router = () => {
   // ** Hooks

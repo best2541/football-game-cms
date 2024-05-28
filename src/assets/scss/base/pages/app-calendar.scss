@@ -1,7 +1,7 @@
 // Core variables and mixins
-
-@import '@src/assets/scss/base/bootstrap-extended/include'; // Bootstrap includes
-@import '@src/assets/scss/base/components/include'; // Components includes
+@import '../../base/bootstrap-extended/include';
+@import '../../base/components/include';
+// @import 'src/assets/scss/base/components/include'; // Components includes
 
 $fc-calendar-height: 650px;
 $fc-sidebar-width: 18rem;

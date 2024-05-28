@@ -1,63 +1,63 @@
 import { useContext } from 'react'
 import { List } from 'react-feather'
-import { kFormatter } from '@utils'
-import Avatar from '@src/components/avatar'
-import Timeline from '@src/components/timeline'
-import AvatarGroup from '@src/components/avatar-group'
-import jsonImg from '@src/assets/images/icons/json.png'
-import ceo from '@src/assets/images/portrait/small/avatar-s-9.jpg'
-import { ThemeColors } from '@src/utility/context/ThemeColors'
-import Sales from '@src/modules/ui-elements/cards/analytics/Sales'
-import AvgSessions from '@src/modules/ui-elements/cards/analytics/AvgSessions'
-import CardAppDesign from '@src/modules/ui-elements/cards/advance/CardAppDesign'
-import SupportTracker from '@src/modules/ui-elements/cards/analytics/SupportTracker'
+import { kFormatter } from '../../../utility/Utils'
+import Avatar from '../../../components/avatar'
+import Timeline from '../../../components/timeline'
+import AvatarGroup from '../../../components/avatar-group'
+import jsonImg from '../../../assets/images/icons/json.png'
+import ceo from '../../../assets/images/portrait/small/avatar-s-9.jpg'
+import { ThemeColors } from '../../../utility/context/ThemeColors'
+import Sales from '../../../modules/ui-elements/cards/analytics/Sales'
+import AvgSessions from '../../../modules/ui-elements/cards/analytics/AvgSessions'
+import CardAppDesign from '../../../modules/ui-elements/cards/advance/CardAppDesign'
+import SupportTracker from '../../../modules/ui-elements/cards/analytics/SupportTracker'
 import { Row, Col, Card, CardHeader, CardTitle, CardBody, Media } from 'reactstrap'
-import OrdersReceived from '@src/modules/ui-elements/cards/statistics/OrdersReceived'
-import CardCongratulations from '@src/modules/ui-elements/cards/advance/CardCongratulations'
-import SubscribersGained from '@src/modules/ui-elements/cards/statistics/SubscribersGained'
+import OrdersReceived from '../../../modules/ui-elements/cards/statistics/OrdersReceived'
+import CardCongratulations from '../../../modules/ui-elements/cards/advance/CardCongratulations'
+import SubscribersGained from '../../../modules/ui-elements/cards/statistics/SubscribersGained'
 
-import '@src/assets/scss/react/libs/charts/apex-charts.scss'
+import '../../../assets/scss/react/libs/charts/apex-charts.scss'
 
 const AnalyticsDashboard = () => {
   const { colors } = useContext(ThemeColors)
 
   const avatarGroupArr = [
-      {
-        title: 'Billy Hopkins',
-        img: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
-        placement: 'bottom',
-        imgHeight: 33,
-        imgWidth: 33
-      },
-      {
-        title: 'Amy Carson',
-        img: require('@src/assets/images/portrait/small/avatar-s-6.jpg').default,
-        placement: 'bottom',
-        imgHeight: 33,
-        imgWidth: 33
-      },
-      {
-        title: 'Brandon Miles',
-        img: require('@src/assets/images/portrait/small/avatar-s-8.jpg').default,
-        placement: 'bottom',
-        imgHeight: 33,
-        imgWidth: 33
-      },
-      {
-        title: 'Daisy Weber',
-        img: require('@src/assets/images/portrait/small/avatar-s-7.jpg').default,
-        placement: 'bottom',
-        imgHeight: 33,
-        imgWidth: 33
-      },
-      {
-        title: 'Jenny Looper',
-        img: require('@src/assets/images/portrait/small/avatar-s-20.jpg').default,
-        placement: 'bottom',
-        imgHeight: 33,
-        imgWidth: 33
-      }
-    ],
+    {
+      title: 'Billy Hopkins',
+      img: require('../../../assets/images/portrait/small/avatar-s-9.jpg').default,
+      placement: 'bottom',
+      imgHeight: 33,
+      imgWidth: 33
+    },
+    {
+      title: 'Amy Carson',
+      img: require('../../../assets/images/portrait/small/avatar-s-6.jpg').default,
+      placement: 'bottom',
+      imgHeight: 33,
+      imgWidth: 33
+    },
+    {
+      title: 'Brandon Miles',
+      img: require('../../../assets/images/portrait/small/avatar-s-8.jpg').default,
+      placement: 'bottom',
+      imgHeight: 33,
+      imgWidth: 33
+    },
+    {
+      title: 'Daisy Weber',
+      img: require('../../../assets/images/portrait/small/avatar-s-7.jpg').default,
+      placement: 'bottom',
+      imgHeight: 33,
+      imgWidth: 33
+    },
+    {
+      title: 'Jenny Looper',
+      img: require('../../../assets/images/portrait/small/avatar-s-20.jpg').default,
+      placement: 'bottom',
+      imgHeight: 33,
+      imgWidth: 33
+    }
+  ],
     data = [
       {
         title: '12 Invoices have been paid',

@@ -6,12 +6,12 @@ import {
   Button
 } from 'reactstrap'
 import '@styles/base/pages/page-spinninggame.scss'
-import a from "@src/assets/images/banner/item_in_wheel_logo.png"
-import aa from "@src/assets/images/banner/reward_show1.png"
-import aa2 from "@src/assets/images/banner/reward_show2.png"
-import aa3 from "@src/assets/images/banner/reward_show3.png"
-import aa4 from "@src/assets/images/banner/reward_show4.png"
-import useJwt from '@src/helper/auth/jwt/jwtDefaultConfig'
+import a from "../../assets/images/banner/item_in_wheel_logo.png"
+import aa from "../../assets/images/banner/reward_show1.png"
+import aa2 from "../../assets/images/banner/reward_show2.png"
+import aa3 from "../../assets/images/banner/reward_show3.png"
+import aa4 from "../../assets/images/banner/reward_show4.png"
+import useJwt from '../../helper/auth/jwt/jwtDefaultConfig'
 
 const gameEndPoint = useJwt.gameEndPoint
 

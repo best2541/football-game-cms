@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Repeater from "@src/components/repeater"
+import Repeater from "../../../src/components/repeater"
 import { X, Plus, PlusCircle } from "react-feather"
 import { SlideDown } from "react-slidedown"
 import {
@@ -20,7 +20,7 @@ import {
   DropdownItem
 } from "reactstrap"
 import Select from "react-select"
-import { selectThemeColors } from "@utils"
+import { selectThemeColors } from "../../utility/Utils"
 import Flatpickr from "react-flatpickr"
 
 const NewOptionForm = () => {

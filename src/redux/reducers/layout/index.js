@@ -1,5 +1,6 @@
 // ** ThemeConfig Import
-import themeConfig from '@configs/themeConfig'
+// import themeConfig from '@configs/themeConfig'
+import themeConfig from '../../../configs/themeConfig'
 
 // ** Returns Initial Menu Collapsed State
 const initialMenuCollapsed = () => {

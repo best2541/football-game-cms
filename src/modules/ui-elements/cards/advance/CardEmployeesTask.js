@@ -1,12 +1,12 @@
 import Chart from 'react-apexcharts'
-import Avatar from '@src/components/avatar'
+import Avatar from '../../../../components/avatar'
 import { MoreVertical } from 'react-feather'
 import { Card, CardHeader, CardTitle, CardBody, Media } from 'reactstrap'
 
 const CardEmployeesTasks = ({ colors, trackBgColor }) => {
   const employeesTasks = [
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-9.jpg').default,
       title: 'Ryan Harrington',
       subtitle: 'iOS Developer',
       time: '9hr 20m',
@@ -52,7 +52,7 @@ const CardEmployeesTasks = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-20.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-20.jpg').default,
       title: 'Louisa Norton',
       subtitle: 'UI Designer',
       time: '4hr 17m',
@@ -98,7 +98,7 @@ const CardEmployeesTasks = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-1.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-1.jpg').default,
       title: 'Jayden Duncan',
       subtitle: 'Java Developer',
       time: '12hr 8m',
@@ -144,7 +144,7 @@ const CardEmployeesTasks = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-20.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-20.jpg').default,
       title: 'Cynthia Howell',
       subtitle: 'Angular Developer',
       time: '3hr 19m',
@@ -190,7 +190,7 @@ const CardEmployeesTasks = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-16.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-16.jpg').default,
       title: 'Helena Payne',
       subtitle: 'Marketing',
       time: '9hr 50m',
@@ -236,7 +236,7 @@ const CardEmployeesTasks = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-13.jpg').default,
+      avatar: require('../../../../assets/images/portrait/small/avatar-s-13.jpg').default,
       title: 'Troy Jensen',
       subtitle: 'iOS Developer',
       time: '4hr 48m',

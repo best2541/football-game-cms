@@ -6,7 +6,7 @@ const dayBeforePreviousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000
 const data = {
   profileUser: {
     id: 11,
-    avatar: require('@src/assets/images/portrait/small/avatar-s-8.jpg').default,
+    avatar: require('../../../src/assets/images/portrait/small/avatar-s-8.jpg').default,
     fullName: 'John Doe',
     role: 'admin',
     about:
@@ -24,7 +24,7 @@ const data = {
       role: 'Frontend Developer',
       about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
 
-      avatar: require('@src/assets/images/portrait/small/avatar-s-2.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-2.jpg').default,
       status: 'offline'
     },
     {
@@ -33,7 +33,7 @@ const data = {
       role: 'UI/UX Designer',
       about:
         'Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-1.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-1.jpg').default,
       status: 'busy'
     },
     {
@@ -42,7 +42,7 @@ const data = {
       role: 'Town planner',
       about:
         'Soufflé soufflé caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-3.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-3.jpg').default,
       status: 'busy'
     },
     {
@@ -51,7 +51,7 @@ const data = {
       role: 'Data scientist',
       about:
         'Chupa chups candy canes chocolate bar marshmallow liquorice muffin. Lemon drops oat cake tart liquorice tart cookie. Jelly-o cookie tootsie roll halvah.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-4.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-4.jpg').default,
       status: 'online'
     },
     {
@@ -59,7 +59,7 @@ const data = {
       fullName: 'Margot Henschke',
       role: 'Dietitian',
       about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-5.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-5.jpg').default,
       status: 'busy'
     },
     {
@@ -68,7 +68,7 @@ const data = {
       role: 'Marketing executive',
       about:
         'Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-6.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-6.jpg').default,
       status: 'online'
     },
     {
@@ -77,7 +77,7 @@ const data = {
       role: 'Special educational needs teacher',
       about:
         'Biscuit powder oat cake donut brownie ice cream I love soufflé. I love tootsie roll I love powder tootsie roll.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-7.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-7.jpg').default,
       status: 'online'
     },
     {
@@ -86,7 +86,7 @@ const data = {
       role: 'Advertising copywriter',
       about:
         'Bear claw ice cream lollipop gingerbread carrot cake. Brownie gummi bears chocolate muffin croissant jelly I love marzipan wafer.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-8.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-8.jpg').default,
       status: 'away'
     },
     {
@@ -95,7 +95,7 @@ const data = {
       role: 'Designer, television/film set',
       about:
         'Gummies gummi bears I love candy icing apple pie I love marzipan bear claw. I love tart biscuit I love candy canes pudding chupa chups liquorice croissant.',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-9.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-9.jpg').default,
       status: 'offline'
     },
     {
@@ -103,7 +103,7 @@ const data = {
       fullName: 'Zenia Jacobs',
       role: 'Building surveyor',
       about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
-      avatar: require('@src/assets/images/portrait/small/avatar-s-10.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-10.jpg').default,
       status: 'away'
     }
   ],

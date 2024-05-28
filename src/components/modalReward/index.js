@@ -1,4 +1,4 @@
-import useJwt from '@src/helper/auth/jwt/jwtDefaultConfig'
+import useJwt from '../../../src/helper/auth/jwt/jwtDefaultConfig'
 import './css/index.scss'
 const gameEndPoint = useJwt.gameEndPoint
 

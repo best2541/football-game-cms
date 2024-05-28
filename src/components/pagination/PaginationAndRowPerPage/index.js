@@ -5,7 +5,6 @@ import {
 } from "reactstrap"
 import ReactPaginate from "react-paginate"
 import PropTypes from 'prop-types'
-import { paginationFromTo } from "@src/utility/Utils"
 import { ChevronDown, ChevronUp } from 'react-feather'
 
 const PaginationAndRowPerPage = ({ totalPage, currentPage, perPage, handlePagination, handleRowPerPage }) => {

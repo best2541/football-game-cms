@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router-dom"
 import classnames from 'classnames'
-import InputPasswordToggle from '@src/components/input-password-toggle'
+import InputPasswordToggle from '../../../components/input-password-toggle'
 import { useForm } from 'react-hook-form'
-import icon from "@src/assets/images/img/icon-britz.png"
-import background from "@src/assets/images/img/background-image-britz.png"
+import icon from "../../../assets/images/img/icon-britz.png"
+import background from "../../../assets/images/img/background-image-britz.png"
 import {
   Row,
   Col,
@@ -18,7 +18,7 @@ import {
   Button
 } from 'reactstrap'
 import { saveNewPassword } from '../store/updatePassword/actions'
-import '@src/assets/scss/base/pages/page-auth.scss'
+import '../../../assets/scss/base/pages/page-auth.scss'
 
 const UpdatePassword = () => {
   const { register, errors, handleSubmit } = useForm()

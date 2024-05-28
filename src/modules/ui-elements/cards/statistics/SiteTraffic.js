@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Monitor } from 'react-feather'
-import StatsWithLineChart from '@src/components/widgets/stats/StatsWithLineChart'
+import StatsWithLineChart from '../../../../components/widgets/stats/StatsWithLineChart'
 
 const SiteTraffic = () => {
   const [data, setData] = useState(null)

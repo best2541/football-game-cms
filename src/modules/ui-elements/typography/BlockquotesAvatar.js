@@ -1,5 +1,5 @@
-import img1 from '@src/assets/images/portrait/small/avatar-s-5.jpg'
-import img2 from '@src/assets/images/portrait/small/avatar-s-3.jpg'
+import img1 from '../../../assets/images/portrait/small/avatar-s-5.jpg'
+import img2 from '../../../assets/images/portrait/small/avatar-s-3.jpg'
 import { Card, CardHeader, CardTitle, CardText, CardBody, Media } from 'reactstrap'
 
 const BlockquotesAvatar = () => {

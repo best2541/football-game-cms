@@ -2,7 +2,7 @@
 import { Fragment } from 'react'
 
 // ** Custom Components
-import Avatar from '@components/avatar'
+import Avatar from '../../../../src/components/avatar'
 
 // ** Third Party Components
 import classnames from 'classnames'
@@ -23,7 +23,7 @@ const NotificationDropdown = () => {
   // ** Notification Array
   const notificationsArray = [
     {
-      img: require('@src/assets/images/portrait/small/avatar-s-15.jpg').default,
+      img: require('../../../assets/images/portrait/small/avatar-s-15.jpg').default,
       subtitle: 'Won the monthly best seller badge.',
       title: (
         <Media tag='p' heading>
@@ -32,7 +32,7 @@ const NotificationDropdown = () => {
       )
     },
     {
-      img: require('@src/assets/images/portrait/small/avatar-s-3.jpg').default,
+      img: require('../../../assets/images/portrait/small/avatar-s-3.jpg').default,
       subtitle: 'You have 10 unread messages.',
       title: (
         <Media tag='p' heading>

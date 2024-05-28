@@ -6,7 +6,7 @@ import classnames from 'classnames'
 
 // ** Store & Actions
 import { useSelector, useDispatch } from 'react-redux'
-import { handleContentWidth, handleMenuCollapsed, handleMenuHidden } from '@store/actions/layout'
+import { handleContentWidth, handleMenuCollapsed, handleMenuHidden } from '../../../redux/actions/layout'
 
 // ** Styles
 import 'animate.css/animate.css'

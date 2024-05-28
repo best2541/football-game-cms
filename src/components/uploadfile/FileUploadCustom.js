@@ -1,7 +1,6 @@
 import React from 'react'
 import {DragDrop} from '@uppy/react'
-import '@src/assets/scss/react/libs/file-uploader/file-uploader.scss'
-
+import '../../assets/scss/react/libs/file-uploader/file-uploader.scss'
 import 'uppy/dist/uppy.css'
 import '@uppy/status-bar/dist/style.css'
 import "./css/index.scss"

@@ -9,7 +9,7 @@ import { ChevronRight } from 'react-feather'
 
 // ** Styles
 import 'bs-stepper/dist/css/bs-stepper.min.css'
-import '@src/assets/scss/base/plugins/forms/form-wizard.scss'
+import '../../assets/scss/base/plugins/forms/form-wizard.scss'
 
 import { wizard_type, wizard_default } from "./types"
 

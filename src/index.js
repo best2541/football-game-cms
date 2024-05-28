@@ -15,10 +15,9 @@ import { IntlProviderWrapper } from "./utility/context/Internationalization"
 
 import { ClearBrowserCacheBoundary } from "react-clear-browser-cache"
 // ** Spinner (Splash Screen)
-import Spinner from "@src/components/spinner/Fallback-spinner"
-
+import Spinner from "./components/spinner/Fallback-spinner"
 // ** Ripple Button
-import "@src/components/ripple-button"
+import '../src/components/ripple-button'
 
 // ** PrismJS
 import "prismjs"
@@ -29,8 +28,7 @@ import "prismjs/components/prism-jsx.min"
 import "react-perfect-scrollbar/dist/css/styles.css"
 
 // ** React Toastify
-import "@src/assets/scss/react/libs/toastify/toastify.scss"
-
+import "../src/assets/scss/react/libs/toastify/toastify.scss"
 // ** Fake Database
 import './@fake-db'
 
@@ -40,7 +38,7 @@ import "./assets/scss/core.scss"
 import "./assets/scss/style.scss"
 
 // ** antd
-import "antd/dist/antd.css"
+// import "antd/dist/antd.css"
 
 // i18n
 import "./helper/i18n"

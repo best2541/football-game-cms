@@ -1,6 +1,5 @@
 // ** Custom Components
-import Avatar from '@src/components/avatar'
-
+import Avatar from '../../../components/avatar'
 // ** Third Party Components
 import PropTypes from 'prop-types'
 import classnames from 'classnames'

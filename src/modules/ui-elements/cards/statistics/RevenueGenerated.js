@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { CreditCard } from 'react-feather'
-import StatsWithAreaChart from '@src/components/widgets/stats/StatsWithAreaChart'
+import StatsWithAreaChart from '../../../../components/widgets/stats/StatsWithAreaChart'
 
 const RevenueGenerated = ({ kFormatter, success }) => {
   const [data, setData] = useState(null)

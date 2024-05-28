@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react'
 import { Row, Col } from 'reactstrap'
-import { kFormatter } from '@utils'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import { kFormatter } from '../../../../utility/Utils'
+import Breadcrumbs from '../../../../components/breadcrumbs'
 import StatsCard from './StatsCard'
 import OrdersBarChart from './OrdersBarChart'
 import ProfitLineChart from './ProfitLineChart'
@@ -12,8 +12,8 @@ import OrdersReceived from './OrdersReceived'
 import SiteTraffic from './SiteTraffic'
 import ActiveUsers from './ActiveUsers'
 import Newsletter from './Newsletter'
-import StatsVertical from '@src/components/widgets/stats/StatsVertical'
-import StatsHorizontal from '@src/components/widgets/stats/StatsHorizontal'
+import StatsVertical from '../../../../components/widgets/stats/StatsVertical'
+import StatsHorizontal from '../../../../components/widgets/stats/StatsHorizontal'
 import {
   Eye,
   MessageSquare,
@@ -26,7 +26,7 @@ import {
   Activity,
   AlertOctagon
 } from 'react-feather'
-import { ThemeColors } from '@src/utility/context/ThemeColors'
+import { ThemeColors } from '../../../../utility/context/ThemeColors'
 
 const StatisticsCards = () => {
   const context = useContext(ThemeColors)

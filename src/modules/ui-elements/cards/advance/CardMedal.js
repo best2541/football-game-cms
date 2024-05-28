@@ -1,5 +1,5 @@
 import { Card, CardBody, CardText, Button } from 'reactstrap'
-import medal from '@src/assets/images/illustration/badge.svg'
+import medal from '../../../../assets/images/illustration/badge.svg'
 
 const CardMedal = () => {
   return (

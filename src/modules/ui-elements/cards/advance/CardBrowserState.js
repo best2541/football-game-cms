@@ -16,7 +16,7 @@ import {
 const CardBrowserState = ({ colors, trackBgColor }) => {
   const statesArr = [
     {
-      avatar: require('@src/assets/images/icons/google-chrome.png').default,
+      avatar: require('../../../../assets/images/icons/google-chrome.png').default,
       title: 'Google Chrome',
       value: '54.4%',
       chart: {
@@ -61,7 +61,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/mozila-firefox.png').default,
+      avatar: require('../../../../assets/images/icons/mozila-firefox.png').default,
       title: 'Mozila Firefox',
       value: '6.1%',
       chart: {
@@ -106,7 +106,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/apple-safari.png').default,
+      avatar: require('../../../../assets/images/icons/apple-safari.png').default,
       title: 'Apple Safari',
       value: '14.6%',
       chart: {
@@ -151,7 +151,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/internet-explorer.png').default,
+      avatar: require('../../../../assets/images/icons/internet-explorer.png').default,
       title: 'Internet Explorer',
       value: '4.2%',
       chart: {
@@ -196,7 +196,7 @@ const CardBrowserState = ({ colors, trackBgColor }) => {
       }
     },
     {
-      avatar: require('@src/assets/images/icons/opera.png').default,
+      avatar: require('../../../../assets/images/icons/opera.png').default,
       title: 'Opera Mini',
       value: '8.4%',
       chart: {

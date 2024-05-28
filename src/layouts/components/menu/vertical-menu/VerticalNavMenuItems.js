@@ -8,14 +8,14 @@ import VerticalNavMenuSectionHeader from './VerticalNavMenuSectionHeader'
 import UserManagement from './UserManagement'
 
 // ** Ability Context
-import { AbilityContext } from '@src/utility/context/Can'
+import { AbilityContext } from '../../../../utility/context/Can'
 
 // ** Utils
 import {
   resolveVerticalNavMenuItemComponent as resolveNavItemComponent,
   canViewMenuGroup,
   canViewMenuItem
-} from '@layouts/utils'
+} from '../../../../layouts/utils'
 
 const VerticalMenuNavItems = props => {
   // ** Context

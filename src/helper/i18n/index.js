@@ -3,8 +3,8 @@ import Backend from "i18next-http-backend"
 import LanguageDetector from "i18next-browser-languagedetector"
 import { initReactI18next } from "react-i18next"
 
-import translationEN from '@src/locales/en/trans.json'
-import translationTH from '@src/locales/th/trans.json'
+import translationEN from '../../locales/en/trans.json'
+import translationTH from '../../locales/th/trans.json'
 
 const resources = {
   en: {

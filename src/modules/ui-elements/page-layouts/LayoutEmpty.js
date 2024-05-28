@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../components/breadcrumbs'
 import { Alert } from 'reactstrap'
 
 const LayoutEmpty = () => {

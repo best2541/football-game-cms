@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Mail } from 'react-feather'
-import StatsWithLineChart from '@src/components/widgets/stats/StatsWithLineChart'
+import StatsWithLineChart from '../../../../components/widgets/stats/StatsWithLineChart'
 
 const Newsletter = ({ warning }) => {
   const [data, setData] = useState(null)

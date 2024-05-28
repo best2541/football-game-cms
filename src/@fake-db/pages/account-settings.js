@@ -2,7 +2,7 @@ import mock from '../mock'
 const data = {
   accountSetting: {
     general: {
-      avatar: require('@src/assets/images/portrait/small/avatar-s-11.jpg').default,
+      avatar: require('../../../src/assets/images/portrait/small/avatar-s-11.jpg').default,
       username: 'johndoe',
       fullName: 'John Doe',
       email: 'granger007@hogward.com',
@@ -26,11 +26,11 @@ const data = {
       },
       connections: {
         twitter: {
-          profileImg: require('@src/assets/images/avatars/11-small.png').default,
+          profileImg: require('../../../src/assets/images/avatars/11-small.png').default,
           id: 'johndoe'
         },
         google: {
-          profileImg: require('@src/assets/images/avatars/3-small.png').default,
+          profileImg: require('../../../src/assets/images/avatars/3-small.png').default,
           id: 'luraweber'
         },
         facebook: {},

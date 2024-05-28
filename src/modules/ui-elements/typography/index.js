@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { Row, Col } from 'reactstrap'
-import Breadcrumbs from '@src/components/breadcrumbs'
+import Breadcrumbs from '../../../components/breadcrumbs'
 import HTMLHeadings from './HTMLHeadings'
 import LightBoldHeadings from './LightBoldHeadings'
 import CustomizingHeadings from './CustomizingHeadings'
