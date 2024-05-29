@@ -159,7 +159,6 @@ const Home = () => {
   useEffect(() => {
     axiosInstance.get('/dashboard/getDashboard')
       .then(async result => {
-        console.log(result.data)
         setAllTimePlay(result.data.allTimePlay)
         setTotalUsers(result.data.totalUsers)
         setTotalUsersPhone(result.data.totalUsersPhone)
@@ -174,7 +173,7 @@ const Home = () => {
           // hours.push(`${hour}:00`)
           set[hour] = set[hour] ? set[hour] + 1 : 1
         })
-        await Object.keys(set)?.map(d => hours.push(`${d}:00`))
+        await Object.keys(set)?.map(d => hours.push(`${d}:00-${d}:59`))
         setLabels(hours)
         setRecords([
           {
