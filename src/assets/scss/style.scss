@@ -14,7 +14,16 @@ input {
 	font-weight: 500 !important
 }
 
+a {
+	text-decoration: none !important;
+}
 
+button {
+	color: white !important;
+}
+.card {
+	background-color: white !important;
+}
 @media screen and (max-width: 400px) {
 	.answer-card {
 		width: 70%;
